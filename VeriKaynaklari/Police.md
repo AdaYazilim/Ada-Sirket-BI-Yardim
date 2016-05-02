@@ -54,10 +54,13 @@ Tahakkuk eden primler toplamından, iade / iptal primler toplamını çıkartır
 
 
 <h4>IptalEdilmis</h4>
-Poliçenin iptal edilip edilmediğini gösterir
+Poliçenin iptal edilip edilmediğini belirtir.
 <pre>IptalEdilmis = Police[IPTAL_DURUMU]=1</pre>
-
 
 <h4>SonDurum_Tarz</h4>
 Araç tarzının son durumunu belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a>
-<pre>SonDurum_Tarz</b> = SUMMARIZE(TOPN(1; RELATEDTABLE(PoliceZeyil); PoliceZeyil[ZEYL_NO];DESC);[ARAC_TARZ])</pre>
+<pre>SonDurum_Tarz = SUMMARIZE(TOPN(1; RELATEDTABLE(PoliceZeyil); PoliceZeyil[ZEYL_NO];DESC);[ARAC_TARZ])</pre>
+
+<h4>SonDurum_ZeyilNo</h4>
+Poliçeye ait en son kesilmiş zeyilin numarasını belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a>
+<pre>SonDurum_ZeyilNo = SUMMARIZE(TOPN(1; relatedtable(PoliceZeyil); PoliceZeyil[ZEYL_NO];DESC);[ZEYL_NO])</pre>

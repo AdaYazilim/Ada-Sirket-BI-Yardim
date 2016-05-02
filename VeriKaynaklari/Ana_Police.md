@@ -12,10 +12,16 @@ Poliçe kayıtlarına erişmek için kullanılır. Formüller kullanılarak poli
 <th>Çocuk Veri Kaynağı Kolon Adi</th>
 </tr>
 <tr>
-<td>Ana_Police</td>
+<td>Police</td>
 <td>PoliceKey</td>
-<td><a href="../VeriKaynaklari/Police_TrafikKaskoAyrinti.md">Police_TrafikKaskoAyrinti</a></td>
+<td><a href="../VeriKaynaklari/Police-Zeyil.md">Police-Zeyil</a></td>
 <td>AnaPoliceKey</td>
+</tr>
+<tr>
+<td>Police</td>
+<td>PoliceKey</td>
+<td><a href="../VeriKaynaklari/Police_TrafikKaskoAyrinti.md">Police-Ayrinti-Arac</a></td>
+<td>PoliceKey</td>
 </tr>
 </table>
 
@@ -41,5 +47,7 @@ in
 </pre>
 
 <h2>Formüller</h2>
-Araç tarzının son durumunu almak için. 
-SonDurum_Tarz = SUMMARIZE(TOPN(1; relatedtable(TumPoliceVeZeyiller); TumPoliceVeZeyiller[ZEYL_NO];DESC);[ARAC_TARZ])
+<h4>SonDurum_Tarz</h4>
+Araç tarzının son durumunu belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/Police-Zeyil.md">Police-Zeyil</a>
+<br>
+<b>SonDurum_Tarz</b> = SUMMARIZE(TOPN(1; relatedtable(TumPoliceVeZeyiller); TumPoliceVeZeyiller[ZEYL_NO];DESC);[ARAC_TARZ])

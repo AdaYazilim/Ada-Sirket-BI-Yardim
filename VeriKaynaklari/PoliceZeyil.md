@@ -14,7 +14,7 @@ Poliçe ve zeyil kayıtlarına erişmek için kullanılır. <a href="../VeriKayn
 <tr>
 <td><a href="../VeriKaynaklari/Police.md">Police</a></td>
 <td>PoliceKey</td>
-<td><a href="../VeriKaynaklari/Police-Zeyil.md">Police-Zeyil</a></td>
+<td><a href="../VeriKaynaklari/PoliceZeyil.md">Police-Zeyil</a></td>
 <td>AnaPoliceKey</td>
 </tr>
 </table>

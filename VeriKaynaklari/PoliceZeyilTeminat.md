@@ -12,9 +12,9 @@ Poliçe ve zeyillerin teminat ayrıntılarına erişmek için kullanılır.
 <th>Çocuk Veri Kaynağı Kolon Adi</th>
 </tr>
 <tr>
-<td><a href="../VeriKaynaklari/PoliceZeyil.md">Police</a></td>
+<td><a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a></td>
 <td>PoliceKey</td>
-<td><a href="../VeriKaynaklari/PoliceZeyilTeminat.md">PoliceZeyil</a></td>
+<td><a href="../VeriKaynaklari/PoliceZeyilTeminat.md">PoliceZeyilTeminat</a></td>
 <td>PoliceKey</td>
 </tr>
 </table>

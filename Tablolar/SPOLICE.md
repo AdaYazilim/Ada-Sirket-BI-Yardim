@@ -1,13 +1,7 @@
 <h1>SPOLICE tablosu</h1>
 Tüm teklif / poliçe / zeyil kayıtlarının ana bilgilerini tutar.
 
-<h3>SPOLICE tablosu</h3>
 <table>
-<tr>
-<td>ACENTA</td>
-<td>Acente kodu</td>
-</tr>
-<tr>
 <td>ACENTA</td>
 <td>Acente kodu</td>
 </tr>

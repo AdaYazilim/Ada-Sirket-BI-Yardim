@@ -2,6 +2,7 @@
 Ana_Police, poliçe kayıtlarına erişmek için kullanılır. Bu tablo ana tablo olarak kullanılarak ana poliçe üzerindeki tüm verilere (poliçedeki hali veya son durumu) erişilebilir.
 
 <h2>Power Query</h2>
+<pre>
 let
     config = let
     	Source = Xml.Tables(File.Contents("C:\Power BI Raporlar\config.xml")),
@@ -17,3 +18,4 @@ let
     	#"Added Custom" = Table.AddColumn(#"Filtered Rows", "PoliceKey", each [ACENTA]&"_"&[BRANS]&"_"&[POLICE_NO]&"_"&[TECDIT_NO]&"_"&[ZEYL_NO])
 in
     #"Added Custom"
+</pre>

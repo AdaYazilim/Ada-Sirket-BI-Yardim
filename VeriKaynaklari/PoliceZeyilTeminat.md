@@ -23,20 +23,16 @@ Poliçe ve zeyillerin teminat ayrıntılarına erişmek için kullanılır.
 <h2>Power Query</h2>
 <pre>
 let
-    config = let
-        Source = Xml.Tables(File.Contents("C:\Power BI Raporlar\config.xml")),
-        Table0 = Source{0}[Table],
-        Table1 = Table.TransformColumnTypes(Table0,{{"server", type text}, {"database", type text}}),
-        config = Table1{0},
-        veritabani = Sql.Database(config[server], config[database]),
-        #"Changed Type" = Table.TransformColumnTypes(Source,{{"server", type text}, {"database", type text}})
-    in
-        veritabani,
-        dbo_STEMSATR = config{[Schema="dbo",Item="STEMSATR"]}[Data],
-        #"Removed Other Columns" = Table.SelectColumns(dbo_STEMSATR,{"TYIL", "TACENTA", "TBRANS", "TPOLICE_NO", "TZEYL_NO", "TTECDIT_NO", "TEM_KODU", "TEK_BRANS", "SIG_BEDELI", "FIYAT", "FINDARTPRM", "FTEMKOM"}),
-        #"Added Custom" = Table.AddColumn(#"Removed Other Columns", "PoliceKey", each [TACENTA]&"_"&[TBRANS]&"_"&[TPOLICE_NO]&"_"&[TTECDIT_NO]&"_"&[TZEYL_NO])
+	Source = Xml.Tables(File.Contents("C:\Power BI Raporlar\config.xml")),
+	Table0 = Source{0}[Table],
+	Table1 = Table.TransformColumnTypes(Table0,{{"server", type text}, {"database", type text}}),
+	config = Table1{0},
+	veritabani = Sql.Database(config[server], config[database], [Query="select * from STEMSATR T WHERE EXISTS (	SELECT 'A' FROM SPOLICE P WHERE P.ACENTA = T.TACENTA AND P.BRANS = T.TBRANS AND P.POLICE_NO = T.TPOLICE_NO AND P.TECDIT_NO = T.TTECDIT_NO 	AND P.ZEYL_NO = T.TZEYL_NO AND P.IPT_KAYIT IN ('K','I'))"]) ,
+	#"Removed Other Columns" = Table.SelectColumns(veritabani,{"TYIL", "TACENTA", "TBRANS", "TPOLICE_NO", "TZEYL_NO", "TTECDIT_NO", "TEM_KODU", "TEK_BRANS", "SIG_BEDELI", "FINDARTPRM", "FTEMKOM", "KOM_ORAN"}),
+	#"Added Custom" = Table.AddColumn(#"Removed Other Columns", "PoliceKey", each [TACENTA]&"_"&[TBRANS]&"_"&[TPOLICE_NO]&"_"&[TTECDIT_NO]&"_"&[TZEYL_NO]),
+	#"Added Custom1" = Table.AddColumn(#"Added Custom", "TeminatKey", each [TBRANS]&"_"&[TEM_KODU])
 in
-    #"Added Custom"
+	#"Added Custom1"
 </pre>
 
 <h2>Formüller</h2>

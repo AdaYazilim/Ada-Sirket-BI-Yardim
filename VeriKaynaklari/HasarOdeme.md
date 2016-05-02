@@ -37,3 +37,9 @@ let
 in
     #"Filtered Rows"
 </pre>
+
+<h2>Formüller</h2>
+
+<h4>GidenOdeme</h4>
+Hasar ödemesinin şirketten çıkış olup olmadığını belirtir. 
+<pre>GidenOdeme = VALUE(HasarOdeme[OKODU])<90</pre>

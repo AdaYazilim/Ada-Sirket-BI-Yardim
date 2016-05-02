@@ -1,8 +1,24 @@
-<h1>Ana_Police</h1>
-Ana_Police, poliçe kayıtlarına erişmek için kullanılır. Bu tablo ana tablo olarak kullanılarak ana poliçe üzerindeki tüm verilere (poliçedeki hali veya son durumu) erişilebilir.
+<h1>Police</h1>
+Poliçe kayıtlarına erişmek için kullanılır. Formüller kullanılarak poliçe üzerindeki tüm verilere (poliçe üzerindeki hali veya son durumu) erişilebilir.
 
-<h2>İlgili Tablo</h2>
-<a href="../Tablolar/SPOLICE.md">SPOLICE</a>
+<a href="../Tablolar/SPOLICE.md">SPOLICE</a> tablosunu kullanır.
+
+<h2>İlişki Kurulabilecek Veri Kaynakları</h2>
+<table>
+<tr>
+<th>Ana Veri Kaynağı</th>
+<th>Ana Veri Kaynağı Kolon Adı</th>
+<th>Çocuk Veri Kaynağı</th>
+<th>Çocuk Veri Kaynağı Kolon Adi</th>
+</tr>
+<tr>
+<td>Ana_Police</td>
+<td>PoliceKey</td>
+<td><a href="../VeriKaynaklari/Police_TrafikKaskoAyrinti.md">Police_TrafikKaskoAyrinti</a></td>
+<td>AnaPoliceKey</td>
+</tr>
+</table>
+
 
 <h2>Power Query</h2>
 <pre>
@@ -23,3 +39,7 @@ let
 in
     #"Removed Other Columns"
 </pre>
+
+<h2>Formüller</h2>
+Araç tarzının son durumunu almak için. 
+SonDurum_Tarz = SUMMARIZE(TOPN(1; relatedtable(TumPoliceVeZeyiller); TumPoliceVeZeyiller[ZEYL_NO];DESC);[ARAC_TARZ])

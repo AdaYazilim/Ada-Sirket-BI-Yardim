@@ -1,4 +1,4 @@
-<h1>Police-Zeyil</h1>
+<h1>PoliceZeyil</h1>
 Poliçe ve zeyil kayıtlarına erişmek için kullanılır. <a href="../VeriKaynaklari/Police.md">Police</a> veri kaynağına ilişkilendirilip poliçe son durum bilgilerini almak için kullanılabilir.
 
 <a href="../Tablolar/SPOLICE.md">SPOLICE</a> tablosunu kullanır.

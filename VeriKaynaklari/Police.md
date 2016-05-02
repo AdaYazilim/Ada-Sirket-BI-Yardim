@@ -47,7 +47,18 @@ in
 </pre>
 
 <h2>Formüller</h2>
+
+<h4>SonDurum_NetPrim</h4>
+Tahakkuk eden primler toplamından, iade / iptal primler toplamını çıkartır. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/Police-Zeyil.md">Police-Zeyil</a><br>
+<b>SonDurum_NetPrim</b> = SUMX(RELATEDTABLE(Police-Zeyil);SPOLICE[NetPrim])
+
+
+<h4>IptalEdilmis</h4>
+Poliçenin iptal edilip edilmdiğini gösterir<br>
+<b>IptalEdilmis</b> = Police[IPTAL_DURUMU]=1
+
+
 <h4>SonDurum_Tarz</h4>
 Araç tarzının son durumunu belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/Police-Zeyil.md">Police-Zeyil</a>
 <br>
-<b>SonDurum_Tarz</b> = SUMMARIZE(TOPN(1; relatedtable(Police-Zeyil); Police-Zeyil[ZEYL_NO];DESC);[ARAC_TARZ])
+<b>SonDurum_Tarz</b> = SUMMARIZE(TOPN(1; RELATEDTABLE(Police-Zeyil); Police-Zeyil[ZEYL_NO];DESC);[ARAC_TARZ])

@@ -44,11 +44,43 @@ Tüm teklif / poliçe / zeyil kayıtlarının ana bilgilerini tutar.
 <td>Tanzim tarihi</td>
 </tr>
 <tr>
+<td>TANZIM_YER</td>
+<td>Tanzim yeri</td>
+</tr>
+<tr>
 <td>UW_YEAR</td>
 <td>UW yılı</td>
 </tr>
 <tr>
 <td>PRIM</td>
 <td>Net prim</td>
+</tr>
+<tr>
+<td>KISI_SAYI</td>
+<td>Araç kişi sayısı. Araç bilgisi olmayan poliçelerde boş.</td>
+</tr>
+<tr>
+<td>TARIFE_BAS</td>
+<td>Kasko ve trafik poliçelerinde tarife basamak kodu. Diğer ürünlerde boş.</td>
+</tr>
+<tr>
+<td>ACE_BOLGE_KODU</td>
+<td>Poliçe bölge kodu</td>
+</tr>
+<tr>
+<td>IPTAL_DURUMU</td>
+<td>Poliçenin iptal olup olmadığı (1 iptal olmuş demek)</td>
+</tr>
+<tr>
+<td>IPTAL_TARIHI</td>
+<td>Poliçenin iptal zeyili ile sonlanma tarihi</td>
+</tr>
+<tr>
+<td>ORTAK_NO</td>
+<td>Poliçe ortak numarası</td>
+</tr>
+<tr>
+<td>ARAC_TARZ</td>
+<td>Araç kullanım tarzı</td>
 </tr>
 <table>

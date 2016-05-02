@@ -14,13 +14,13 @@ Poliçe kayıtlarına erişmek için kullanılır. Formüller kullanılarak poli
 <tr>
 <td>Police</td>
 <td>PoliceKey</td>
-<td><a href="../VeriKaynaklari/Police-Zeyil.md">Police-Zeyil</a></td>
+<td><a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a></td>
 <td>AnaPoliceKey</td>
 </tr>
 <tr>
 <td>Police</td>
 <td>PoliceKey</td>
-<td><a href="../VeriKaynaklari/Police_TrafikKaskoAyrinti.md">Police-Ayrinti-Arac</a></td>
+<td><a href="../VeriKaynaklari/PoliceAyrintiArac.md">PoliceAyrintiArac</a></td>
 <td>PoliceKey</td>
 </tr>
 </table>
@@ -49,8 +49,8 @@ in
 <h2>Formüller</h2>
 
 <h4>SonDurum_NetPrim</h4>
-Tahakkuk eden primler toplamından, iade / iptal primler toplamını çıkartır. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/Police-Zeyil.md">Police-Zeyil</a>
-<pre>SonDurum_NetPrim = SUMX(RELATEDTABLE(Police-Zeyil);SPOLICE[NetPrim])</pre>
+Tahakkuk eden primler toplamından, iade / iptal primler toplamını çıkartır. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a>
+<pre>SonDurum_NetPrim = SUMX(RELATEDTABLE(PoliceZeyil);PoliceZeyil[NetPrim])</pre>
 
 
 <h4>IptalEdilmis</h4>
@@ -59,5 +59,5 @@ Poliçenin iptal edilip edilmediğini gösterir
 
 
 <h4>SonDurum_Tarz</h4>
-Araç tarzının son durumunu belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/Police-Zeyil.md">Police-Zeyil</a>
-<pre>SonDurum_Tarz</b> = SUMMARIZE(TOPN(1; RELATEDTABLE(Police-Zeyil); Police-Zeyil[ZEYL_NO];DESC);[ARAC_TARZ])</pre>
+Araç tarzının son durumunu belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a>
+<pre>SonDurum_Tarz</b> = SUMMARIZE(TOPN(1; RELATEDTABLE(PoliceZeyil); PoliceZeyil[ZEYL_NO];DESC);[ARAC_TARZ])</pre>

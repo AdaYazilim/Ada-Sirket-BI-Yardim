@@ -54,7 +54,7 @@ Tahakkuk eden primler toplamından, iade / iptal primler toplamını çıkartır
 
 
 <h4>IptalEdilmis</h4>
-Poliçenin iptal edilip edilmdiğini gösterir
+Poliçenin iptal edilip edilmediğini gösterir
 <pre>IptalEdilmis = Police[IPTAL_DURUMU]=1</pre>
 
 

@@ -43,8 +43,4 @@ Teminatın ilişkili olduğu poliçe / zeyilin kayıt iptal kodunu belirtir. İh
 
 <h4>NetPrim</h4>
 Tahakkuk kayıtlarda artı, iade / iptal kayıtlarda eksi tutarlı olarak teminatın net primini belirtir.
-<pre>NetPrim = IF([KayitIptalKodu]="K";PoliceZeyil[FINDARTPRM];PoliceZeyil[FINDARTPRM]*-1)</pre>
-
-<h4>NetPrim</h4>
-Tahakkuk kayıtlarda artı, iade / iptal kayıtlarda eksi tutarlı olarak net primi ifade eder.
-<pre>NetPrim = IF(PoliceZeyil[IPT_KAYIT]="K";PoliceZeyil[PRIM];PoliceZeyil[PRIM]*-1)</pre>
+<pre>NetPrim = IF([KayitIptalKodu]="K";PoliceZeyilTeminat[FINDARTPRM];PoliceZeyilTeminat[FINDARTPRM]*-1)</pre>

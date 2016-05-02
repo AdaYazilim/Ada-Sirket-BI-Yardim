@@ -1,7 +1,7 @@
 <h1>PoliceZeyilTeminat</h1>
 Poliçe ve zeyillerin teminat ayrıntılarına erişmek için kullanılır. 
 
-<a href="../Tablolar/SPOLICE.md">STEMSATR</a> tablosunu kullanır.
+<a href="../Tablolar/STEMSATR.md">STEMSATR</a> tablosunu kullanır.
 
 <h2>İlişki Kurulabilecek Veri Kaynakları</h2>
 <table>

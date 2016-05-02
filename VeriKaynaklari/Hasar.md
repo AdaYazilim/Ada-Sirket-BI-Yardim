@@ -1,7 +1,7 @@
 <h1>Hasar</h1>
 Hasar kayıtlarına erişmek için kullanılır. 
 
-<a href="../Tablolar/SPOLICE.md">SHASAR</a> tablosunu kullanır.
+<a href="../Tablolar/SHASAR.md">SHASAR</a> tablosunu kullanır.
 
 <h2>İlişki Kurulabilecek Veri Kaynakları</h2>
 <table>

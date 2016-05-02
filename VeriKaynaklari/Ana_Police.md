@@ -1,6 +1,9 @@
 <h1>Ana_Police</h1>
 Ana_Police, poliçe kayıtlarına erişmek için kullanılır. Bu tablo ana tablo olarak kullanılarak ana poliçe üzerindeki tüm verilere (poliçedeki hali veya son durumu) erişilebilir.
 
+<h2>İlgili Tablo</h2>
+<a href="../Tablolar/SPOLICE.md">SPOLICE</a>
+
 <h2>Power Query</h2>
 <pre>
 let

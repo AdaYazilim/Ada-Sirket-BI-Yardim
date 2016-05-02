@@ -50,4 +50,4 @@ in
 <h4>SonDurum_Tarz</h4>
 Araç tarzının son durumunu belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/Police-Zeyil.md">Police-Zeyil</a>
 <br>
-<b>SonDurum_Tarz</b> = SUMMARIZE(TOPN(1; relatedtable(TumPoliceVeZeyiller); TumPoliceVeZeyiller[ZEYL_NO];DESC);[ARAC_TARZ])
+<b>SonDurum_Tarz</b> = SUMMARIZE(TOPN(1; relatedtable(Police-Zeyil); Police-Zeyil[ZEYL_NO];DESC);[ARAC_TARZ])

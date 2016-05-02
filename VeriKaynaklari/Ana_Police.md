@@ -16,8 +16,8 @@ let
     	#"Changed Type" = Table.TransformColumnTypes(Source,{{"server", type text}, {"database", type text}})
 	in
     	veritabani,
-    	dbo_SPOLICE1 = config{[Schema="dbo",Item="SPOLICE"]}[Data],
-    	#"Filtered Rows" = Table.SelectRows(#"Removed Other Columns", each ([IPT_KAYIT] = "I" or [IPT_KAYIT] = "K") and ([ZEYL_NO] = "   ")),
+    	dbo_SPOLICE = config{[Schema="dbo",Item="SPOLICE"]}[Data],
+    	#"Filtered Rows" = Table.SelectRows(dbo_SPOLICE, each ([IPT_KAYIT] = "I" or [IPT_KAYIT] = "K") and ([ZEYL_NO] = "   ")),
     	#"Added Custom" = Table.AddColumn(#"Filtered Rows", "PoliceKey", each [ACENTA]&"_"&[BRANS]&"_"&[POLICE_NO]&"_"&[TECDIT_NO]&"_"&[ZEYL_NO])
 in
     #"Added Custom"

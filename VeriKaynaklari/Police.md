@@ -12,13 +12,13 @@ Poliçe kayıtlarına erişmek için kullanılır. Formüller kullanılarak poli
 <th>Çocuk Veri Kaynağı Kolon Adi</th>
 </tr>
 <tr>
-<td>Police</td>
+<td><a href="../VeriKaynaklari/Police.md">Police</a></td>
 <td>PoliceKey</td>
 <td><a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a></td>
 <td>AnaPoliceKey</td>
 </tr>
 <tr>
-<td>Police</td>
+<td><a href="../VeriKaynaklari/Police.md">Police</a></td>
 <td>PoliceKey</td>
 <td><a href="../VeriKaynaklari/PoliceAyrintiArac.md">PoliceAyrintiArac</a></td>
 <td>PoliceKey</td>

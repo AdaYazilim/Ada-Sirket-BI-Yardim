@@ -10,7 +10,7 @@ Dosya bazında ay-yıl bazında, muallak kümüllerine erişmek için kullanıl�
 <th>Çocuk Veri Kaynağı Kolon Adi</th>
 </tr>
 <tr>
-<td><a href="../VeriKaynaklari/Hasar.md">Hasar</a></td>
+<td><a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a></td>
 <td>HasarKey</td>
 <td><a href="../VeriKaynaklari/HasarMuallakKumul.md">HasarMuallakKumul</a></td>
 <td>HasarKey</td>

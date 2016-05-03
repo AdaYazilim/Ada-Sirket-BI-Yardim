@@ -1,4 +1,4 @@
-<h1>Bolgeler</h1>
+<h1>Bolge</h1>
 Bölgeler fihristi
 
 <h2>İlişki Kurulabilecek Veri Kaynakları</h2>
@@ -12,7 +12,7 @@ Bölgeler fihristi
 <tr>
 <td><a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a></td>
 <td>ACE_BOLGE_KODU</td>
-<td><a href="../VeriKaynaklari/Bolgeler.md">Bolgeler</a></td>
+<td><a href="../VeriKaynaklari/Bolge.md">Bolge</a></td>
 <td>BOLGEKODU</td>
 </tr>
 </table>

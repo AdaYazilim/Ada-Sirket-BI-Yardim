@@ -47,6 +47,6 @@ in
 Teminatın ilişkili olduğu poliçe / zeyilin kayıt iptal kodunu belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a>
 <pre>KayitIptalKodu = RELATED(PoliceZeyil[IPT_KAYIT])</pre>
 
-<h4>NetPrim</h4>
+<h4>TeminatNetPrim</h4>
 Tahakkuk kayıtlarda artı, iade / iptal kayıtlarda eksi tutarlı olarak teminatın net primini belirtir.
-<pre>NetPrim = IF([KayitIptalKodu]="K";PoliceZeyilTeminat[FINDARTPRM];PoliceZeyilTeminat[FINDARTPRM]*-1)</pre>
+<pre>TeminatNetPrim = IF([KayitIptalKodu]="K";PoliceZeyilTeminat[FINDARTPRM];PoliceZeyilTeminat[FINDARTPRM]*-1)</pre>

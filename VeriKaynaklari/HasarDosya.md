@@ -45,15 +45,15 @@ in
 <h2>Formüller</h2>
 
 <h4>OdemeToplami</h4>
-Hasara ait yapılan tüm ödemelerin toplamıdır. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarOdeme.md">HasarOdeme</a>
+Hasara ait yapılan tüm ödemelerin toplamıdır. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a>
 <pre>OdemeToplami = SUMX(RELATEDTABLE(HasarMagdur);HasarMagdur[OdemeToplami])</pre>
 
 <h4>TahsilatToplami</h4>
-Hasara ait yapılan tüm tahsilatların toplamıdır. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarTahsilat.md">HasarTahsilat</a>
+Hasara ait yapılan tüm tahsilatların toplamıdır. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a>
 <pre>TahsilatToplami = SUMX(RELATEDTABLE(HasarMagdur);HasarMagdur[TahsilatToplami])</pre>
 
 <h4>HasarNetOdeme</h4>
-Hasara ait yapılan tüm ödemeler - yapılan tüm tahsilatlar rakamını belirtir. İhtiyaç duyulan ilişkili tablolar <a href="../VeriKaynaklari/HasarOdeme.md">HasarOdeme</a> ve <a href="../VeriKaynaklari/HasarTahsilat.md">HasarTahsilat</a>
+Hasara ait yapılan tüm ödemeler - yapılan tüm tahsilatlar rakamını belirtir. İhtiyaç duyulan ilişkili tablolar <a href="../VeriKaynaklari/HasarOdeme.md">HasarOdeme</a> ve <a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a>
 <pre>HasarNetOdeme = SUMX(RELATEDTABLE(HasarMagdur);HasarMagdur[HasarNetOdeme])</pre>
 
 

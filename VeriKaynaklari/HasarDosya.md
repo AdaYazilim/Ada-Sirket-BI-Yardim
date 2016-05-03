@@ -17,6 +17,12 @@ Hasar dosya verisine erişmek için kullanılır. Trafik hasarlarında, birden f
 <td><a href="../VeriKaynaklari/HasarDosya.md">HasarDosya</a></td>
 <td>PoliceKey</td>
 </tr>
+<tr>
+<td><a href="../VeriKaynaklari/HasarDosya.md">HasarDosya</a></td>
+<td>HasarDosyaKey</td>
+<td><a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a></td>
+<td>HasarDosyaKey</td>
+</tr>
 </table>
 
 

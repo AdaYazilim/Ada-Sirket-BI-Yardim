@@ -35,6 +35,13 @@ Hasar kayıtlarına erişmek için kullanılır.
 <td><a href="../VeriKaynaklari/HasarOdeme.md">HasarOdeme</a></td>
 <td>HasarKey</td>
 </tr>
+<tr>
+<td><a href="../VeriKaynaklari/Hasar.md">Hasar</a></td>
+<td>HasarKey</td>
+<td><a href="../VeriKaynaklari/HasarMuallakKumul.md">HasarMuallakKumul</a></td>
+<td>HasarKey</td>
+</tr>
+
 </table>
 
 

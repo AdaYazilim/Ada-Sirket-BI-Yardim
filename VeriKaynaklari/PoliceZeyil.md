@@ -17,6 +17,18 @@ Poliçe ve zeyil kayıtlarına erişmek için kullanılır. <a href="../VeriKayn
 <td><a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a></td>
 <td>AnaPoliceKey</td>
 </tr>
+<tr>
+<td><a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a></td>
+<td>PoliceKey</td>
+<td><a href="../VeriKaynaklari/PoliceZeyilTeminat.md">PoliceZeyilTeminat</a></td>
+<td>AnaPoliceKey</td>
+</tr>
+<tr>
+<td><a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a></td>
+<td>PoliceKey</td>
+<td><a href="../VeriKaynaklari/HasarDosya.md">HasarDosya</a></td>
+<td>PoliceKey</td>
+</tr>
 </table>
 
 

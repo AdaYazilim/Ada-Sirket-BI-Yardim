@@ -33,9 +33,10 @@ let
         dbo_SODEME = config{[Schema="dbo",Item="SODEME"]}[Data],
         #"Removed Other Columns" = Table.SelectColumns(dbo_SODEME,{"OACENTA", "OKOD", "OILKODU", "ODOSYA_NO", "OTARIH", "OKODU", "OMIKTARI", "ODURUM", "ODURUM2", "FOHASNO"}),
         #"Added Custom1" = Table.AddColumn(#"Removed Other Columns", "HasarKey", each [OKOD]&"_"&[OILKODU]&"_"&[ODOSYA_NO]&"_"&[FOHASNO]),
-        #"Filtered Rows" = Table.SelectRows(#"Added Custom1", each ([ODURUM2] = "O"))
+        #"Filtered Rows" = Table.SelectRows(#"Added Custom1", each ([ODURUM] = "O")),
+        #"Filtered Rows1" = Table.SelectRows(#"Filtered Rows", each not Text.StartsWith([OKODU], "9"))
 in
-    #"Filtered Rows"
+    #"Filtered Rows1"
 </pre>
 
 <h2>Formüller</h2>

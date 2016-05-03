@@ -68,3 +68,7 @@ Poliçeye ait en son kesilmiş zeyilin numarasını belirtir. İhtiyaç duyulan 
 Yaşayan poliçe olup olmadığını belirtir. 
 <pre>YasayanPolice = AND(AND(Police[BAS_TAR]<=TODAY();TODAY()<=Police[BIT_TAR]);NOT(Police[IptalEdilmis]))</pre>
 
+<h4>HasarAdedi</h4>
+Poliçenin hasar adedini belirtir.
+<pre>HasarAdet = COUNTROWS(RELATEDTABLE(HasarDosya))</pre>
+

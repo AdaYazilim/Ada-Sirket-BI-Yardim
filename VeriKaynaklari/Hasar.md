@@ -81,6 +81,6 @@ Hasara ait yapılan tüm tahsilatların toplamıdır. İhtiyaç duyulan ilişkil
 
 <h4>HasarNetOdeme</h4>
 Hasara ait yapılan tüm ödemeler - yapılan tüm tahsilatlar rakamını belirtir. İhtiyaç duyulan ilişkili tablolar <a href="../VeriKaynaklari/HasarOdeme.md">HasarOdeme</a> ve <a href="../VeriKaynaklari/HasarTahsilat.md">HasarTahsilat</a>
-<pre>HasarNetOdeme = OdemeToplami - TahsilatToplami</pre>
+<pre>HasarNetOdeme = Hasar[OdemeToplami] - Hasar[TahsilatToplami]</pre>
 
 

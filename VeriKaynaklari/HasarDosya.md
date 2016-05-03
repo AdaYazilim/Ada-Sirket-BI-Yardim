@@ -1,4 +1,4 @@
-<h1>Hasar</h1>
+<h1>HasarDosya</h1>
 Hasar dosya verisine erişmek için kullanılır. Trafik hasarlarında, birden fazla mağdur olan hasarlarda tek dosyayı ifade eder. Kasko, yangın gibi mağdur olmayan branşlarda yine tek dosyayı ifade eder. 
 
 <a href="../Tablolar/SHASAR.md">SHASAR</a> tablosunu kullanır.

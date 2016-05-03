@@ -29,6 +29,12 @@ Poliçe ve zeyil kayıtlarına erişmek için kullanılır. <a href="../VeriKayn
 <td><a href="../VeriKaynaklari/HasarDosya.md">HasarDosya</a></td>
 <td>PoliceKey</td>
 </tr>
+<tr>
+<td><a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a></td>
+<td>ACE_BOLGE_KODU</td>
+<td><a href="../VeriKaynaklari/Bolgeler.md">Bolgeler</a></td>
+<td>BOLGEKODU</td>
+</tr>
 </table>
 
 

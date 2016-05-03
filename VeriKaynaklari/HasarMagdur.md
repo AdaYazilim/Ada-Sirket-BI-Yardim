@@ -20,23 +20,23 @@ Trafik hasarlarında her bir mağduru ifade eder. Diğer branş hasarlarında te
 <tr>
 <td><a href="../VeriKaynaklari/HasarTur.md">HasarTur</a></td>
 <td>HasarTurKey</td>
-<td><a href="../VeriKaynaklari/HasarDosya.md">HasarMagdur</a></td>
+<td><a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a></td>
 <td>HasarMagdur</td>
 </tr>
 <tr>
 <td><a href="../VeriKaynaklari/DosyaTur.md">DosyaTur</a></td>
 <td>DosyaTurKey</td>
-<td><a href="../VeriKaynaklari/HasarDosya.md">HasarDosya</a></td>
+<td><a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a></td>
 <td>DosyaTurKey</td>
 </tr>
 <tr>
-<td><a href="../VeriKaynaklari/Hasar.md">Hasar</a></td>
+<td><a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a></td>
 <td>HasarKey</td>
 <td><a href="../VeriKaynaklari/HasarOdeme.md">HasarOdeme</a></td>
 <td>HasarKey</td>
 </tr>
 <tr>
-<td><a href="../VeriKaynaklari/Hasar.md">Hasar</a></td>
+<td><a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a></td>
 <td>HasarKey</td>
 <td><a href="../VeriKaynaklari/HasarMuallakKumul.md">HasarMuallakKumul</a></td>
 <td>HasarKey</td>

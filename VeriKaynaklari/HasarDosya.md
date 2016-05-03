@@ -1,5 +1,5 @@
 <h1>Hasar</h1>
-Hasar kayıtlarına erişmek için kullanılır. 
+Hasar dosya verisine erişmek için kullanılır. Trafik hasarlarında, birden fazla mağdur olan hasarlarda tek dosyayı ifade eder. Kasko, yangın gibi mağdur olmayan branşlarda yine tek dosyayı ifade eder. 
 
 <a href="../Tablolar/SHASAR.md">SHASAR</a> tablosunu kullanır.
 
@@ -14,19 +14,19 @@ Hasar kayıtlarına erişmek için kullanılır.
 <tr>
 <td><a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a></td>
 <td>PoliceKey</td>
-<td><a href="../VeriKaynaklari/Hasar.md">Hasar</a></td>
+<td><a href="../VeriKaynaklari/HasarDosya.md">HasarDosya</a></td>
 <td>PoliceKey</td>
 </tr>
 <tr>
 <td><a href="../VeriKaynaklari/HasarTur.md">HasarTur</a></td>
 <td>HasarTurKey</td>
-<td><a href="../VeriKaynaklari/Hasar.md">Hasar</a></td>
+<td><a href="../VeriKaynaklari/HasarDosya.md">HasarDosya</a></td>
 <td>HasarTurKey</td>
 </tr>
 <tr>
 <td><a href="../VeriKaynaklari/DosyaTur.md">DosyaTur</a></td>
 <td>DosyaTurKey</td>
-<td><a href="../VeriKaynaklari/Hasar.md">Hasar</a></td>
+<td><a href="../VeriKaynaklari/HasarDosya.md">HasarDosya</a></td>
 <td>DosyaTurKey</td>
 </tr>
 <tr>

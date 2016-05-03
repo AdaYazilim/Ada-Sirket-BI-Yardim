@@ -10,10 +10,10 @@ Bölgeler fihristi
 <th>Çocuk Veri Kaynağı Kolon Adi</th>
 </tr>
 <tr>
-<td><a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a></td>
-<td>ACE_BOLGE_KODU</td>
 <td><a href="../VeriKaynaklari/Bolge.md">Bolge</a></td>
 <td>BOLGEKODU</td>
+<td><a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a></td>
+<td>ACE_BOLGE_KODU</td>
 </tr>
 </table>
 

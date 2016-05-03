@@ -17,6 +17,12 @@ Poliçe ve zeyillerin teminat ayrıntılarına erişmek için kullanılır.
 <td><a href="../VeriKaynaklari/PoliceZeyilTeminat.md">PoliceZeyilTeminat</a></td>
 <td>PoliceKey</td>
 </tr>
+<tr>
+<td><a href="../VeriKaynaklari/Teminat.md">Teminat</a></td>
+<td>TeminatKey</td>
+<td><a href="../VeriKaynaklari/PoliceZeyilTeminat.md">PoliceZeyilTeminat</a></td>
+<td>TeminatKey</td>
+</tr>
 </table>
 
 

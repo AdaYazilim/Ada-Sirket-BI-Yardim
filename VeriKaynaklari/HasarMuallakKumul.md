@@ -1,6 +1,7 @@
 <h1>HasarMuallakKumul</h1>
 Dosya bazında ay-yıl bazında, muallak kümüllerine erişmek için kullanılır.
 
+<a href="../Tablolar/SHASKUM.md">SHASKUM</a> tablosunu kullanır.
 <h2>İlişki Kurulabilecek Veri Kaynakları</h2>
 <table>
 <tr>

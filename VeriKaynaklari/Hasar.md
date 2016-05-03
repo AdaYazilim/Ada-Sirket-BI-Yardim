@@ -71,3 +71,16 @@ Hasar türünü belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKayn
 Dosya türünü belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/DosyaTur.md">DosyaTur</a>
 <pre>DosyaTur = RELATED(DosyaTur[METIN])</pre>
 
+<h4>OdemeToplami</h4>
+Hasara ait yapılan tüm ödemelerin toplamıdır. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarOdeme.md">HasarOdeme</a>
+<pre>OdemeToplami = SUMX(RELATEDTABLE(HasarOdeme);HasarOdeme[OMIKTARI])</pre>
+
+<h4>TahsilatToplami</h4>
+Hasara ait yapılan tüm tahsilatların toplamıdır. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarTahsilat.md">HasarTahsilat</a>
+<pre>TahsilatToplami = SUMX(RELATEDTABLE(HasarTahsilat);HasarTahsilat[OMIKTARI])</pre>
+
+<h4>HasarNetOdeme</h4>
+Hasara ait yapılan tüm ödemeler - yapılan tüm tahsilatlar rakamını belirtir. İhtiyaç duyulan ilişkili tablolar <a href="../VeriKaynaklari/HasarOdeme.md">HasarOdeme</a> ve <a href="../VeriKaynaklari/HasarTahsilat.md">HasarTahsilat</a>
+<pre>HasarNetOdeme = OdemeToplami - TahsilatToplami</pre>
+
+

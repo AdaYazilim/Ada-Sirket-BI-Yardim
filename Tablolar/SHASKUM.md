@@ -2,6 +2,7 @@
 Hasar muallak kümül bilgilerini tutar.
 
 <table>
+<tr>
 <td>YILAY</td>
 <td>Yıl ay (örnek: 201601)</td>
 </tr>

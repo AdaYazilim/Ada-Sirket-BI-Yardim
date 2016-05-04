@@ -59,8 +59,7 @@ let
         veritabani,
         dbo_SHASAR = config{[Schema="dbo",Item="SHASAR"]}[Data],
         #"Removed Other Columns" = Table.SelectColumns(dbo_SHASAR,{"HYIL", "HACENTA", "HBRANS", "HPOLICE_NO", "HTECDIT_NO", "HKOD", "HILKODU", "HDOSYA_NO", "HHTARIH", "HTURU", "HIHBAR_TAR", "HIHBAR_SAA", "HDURUM", "HKAPANIS", "FHASNO", "FDOSYATUR", "BOLGEKODU", "FUW_YEAR", "HZEYL_NO"}),
-        #"Added Custom" = Table.AddColumn(#"Removed Other Columns", "PoliceKey", each [HACENTA]&"_"&[HBRANS]&"_"&[HPOLICE_NO]&"_"&[HTECDIT_NO]&"_"&[HZEYL_NO]),
-        #"Added Custom1" = Table.AddColumn(#"Added Custom", "HasarKey", each [HKOD]&"_"&[HILKODU]&"_"&[HDOSYA_NO]&"_"&[FHASNO]),
+        #"Added Custom1" = Table.AddColumn(#"Removed Other Columns", "HasarKey", each [HKOD]&"_"&[HILKODU]&"_"&[HDOSYA_NO]&"_"&[FHASNO]),
         #"Added Custom2" = Table.AddColumn(#"Added Custom1", "HasarTurKey", each "HasarTuru_"&[HKOD]&"_"&[HTURU]),
         #"Added Custom3" = Table.AddColumn(#"Added Custom2", "DosyaTurKey", each "DosyaTuru_"&[HKOD]&"_"+[FDOSYATUR]),
         #"Added Custom4" = Table.AddColumn(#"Added Custom3", "HasarDosyaKey", each [HKOD]&"_"&[HILKODU]&"_"&[HDOSYA_NO]) 

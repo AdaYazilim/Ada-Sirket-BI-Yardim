@@ -26,7 +26,8 @@ let
     Table1 = Table.TransformColumnTypes(Table0,{{"server", type text}, {"database", type text}}),
     config = Table1{0},
     veritabani = Sql.Database(config[server], config[database], [Query="select * from SBRANS WHERE BKODU = ALTKODU"]),
-    #"Removed Other Columns" = Table.SelectColumns(veritabani,{"BKODU", "HASARKODU", "BADI", "IADI", "ACIKLAMA"}) 
+    #"Removed Other Columns" = Table.SelectColumns(veritabani,{"BKODU", "HASARKODU", "BADI", "IADI", "ACIKLAMA"}),
+    #"Added Custom" = Table.AddColumn(#"Removed Other Columns", "UrunKoduVeAdi", each [BKODU]&" - "&[BADI]) 
 in
-    #"Removed Other Columns"
+    #"Added Custom"
 </pre>

@@ -34,9 +34,10 @@ let
         veritabani,
         dbo_STEMINAT = config{[Schema="dbo",Item="STEMINAT"]}[Data],
         #"Added Custom" = Table.AddColumn(dbo_STEMINAT, "TeminatKey", each [TBRANS]&"_"&[TKODU]),
-        #"Removed Other Columns" = Table.SelectColumns(#"Added Custom",{"TBRANS", "TKODU", "TREA_BRANS", "TREJ_BRANS", "EKRSIRANO", "TADI", "TEM_TIPI", "REASURANS", "UYGULAMA_TARIHI", "TeminatKey"})
+        #"Removed Other Columns" = Table.SelectColumns(#"Added Custom",{"TBRANS", "TKODU", "TREA_BRANS", "TREJ_BRANS", "EKRSIRANO", "TADI", "TEM_TIPI", "REASURANS", "UYGULAMA_TARIHI", "TeminatKey"}),
+    #"Added Custom1" = Table.AddColumn(#"Removed Other Columns", "TeminatBransKodVeAdi", each "("&[TBRANS]&") "&[TKODU]&" - "&[TADI])
 in
-    #"Removed Other Columns"
+    #"Added Custom1"
 </pre>
 
 <h2>Formüller</h2>

@@ -74,7 +74,7 @@ Hasar türünü belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKayn
 <pre>HasarTur = RELATED(HasarTur[Hasar Nedeni])</pre>
 
 
-<h4>DosyaTur</h4>
+<h4>DosyaTur (Column)</h4>
 Dosya türünü belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/DosyaTur.md">DosyaTur</a>
 <pre>DosyaTur = RELATED(DosyaTur[METIN])</pre>
 
@@ -89,5 +89,9 @@ Hasara ait yapılan tüm tahsilatların toplamıdır. İhtiyaç duyulan ilişkil
 <h4>HasarNetOdeme (Measure)</h4>
 Hasara ait yapılan tüm ödemeler - yapılan tüm tahsilatlar rakamını belirtir. İhtiyaç duyulan ilişkili tablolar <a href="../VeriKaynaklari/HasarOdeme.md">HasarOdeme</a> ve <a href="../VeriKaynaklari/HasarTahsilat.md">HasarTahsilat</a>
 <pre>HasarNetOdeme = [OdemeToplami] - [TahsilatToplami]</pre>
+
+<h4>HasarNetOdeme (Measure)</h4>
+Hasara ait muallak rakamını belirtir. Bu değerin doğru çalışabilmesi için tek bir YILAY değerine göre filtreleme yapılmalıdır. Örneğin 201603 seçilirse 2016 mart ayı muallağı görüntülenecektir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarMuallakKumul.md">HasarMuallakKumul</a>
+<pre>HasarMuallak = SUMX(RELATEDTABLE(HasarMuallakKumul);HasarMuallakKumul[HMUALLAK])</pre>
 
 

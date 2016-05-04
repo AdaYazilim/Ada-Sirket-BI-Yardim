@@ -61,6 +61,6 @@ in
 
 <h2>Formüller</h2>
 
-<h4>NetPrim (Column)</h4>
+<h4>PoliceZeyilNetPrim (Column)</h4>
 Tahakkuk kayıtlarda artı, iade / iptal kayıtlarda eksi tutarlı olarak net primi ifade eder.
-<pre>NetPrim = IF(PoliceZeyil[IPT_KAYIT]="K";PoliceZeyil[PRIM];PoliceZeyil[PRIM]*-1)</pre>
+<pre>PoliceZeyilNetPrim = IF([IPT_KAYIT]="K";[PRIM];[PRIM]*-1)</pre>

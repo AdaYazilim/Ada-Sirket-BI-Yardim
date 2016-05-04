@@ -70,7 +70,7 @@ in
 
 <h2>Formüller</h2>
 
-<h4>HasarTur</h4>
+<h4>HasarTur (Column)</h4>
 Hasar türünü belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarTur.md">HasarTur</a>
 <pre>HasarTur = RELATED(HasarTur[Hasar Nedeni])</pre>
 
@@ -79,16 +79,16 @@ Hasar türünü belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKayn
 Dosya türünü belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/DosyaTur.md">DosyaTur</a>
 <pre>DosyaTur = RELATED(DosyaTur[METIN])</pre>
 
-<h4>OdemeToplami</h4>
+<h4>OdemeToplami (Measure)</h4>
 Hasara ait yapılan tüm ödemelerin toplamıdır. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarOdeme.md">HasarOdeme</a>
 <pre>OdemeToplami = SUMX(RELATEDTABLE(HasarOdeme);HasarOdeme[OMIKTARI])</pre>
 
-<h4>TahsilatToplami</h4>
+<h4>TahsilatToplami (Measure)</h4>
 Hasara ait yapılan tüm tahsilatların toplamıdır. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarTahsilat.md">HasarTahsilat</a>
 <pre>TahsilatToplami = SUMX(RELATEDTABLE(HasarTahsilat);HasarTahsilat[OMIKTARI])</pre>
 
-<h4>HasarNetOdeme</h4>
+<h4>HasarNetOdeme (Measure)</h4>
 Hasara ait yapılan tüm ödemeler - yapılan tüm tahsilatlar rakamını belirtir. İhtiyaç duyulan ilişkili tablolar <a href="../VeriKaynaklari/HasarOdeme.md">HasarOdeme</a> ve <a href="../VeriKaynaklari/HasarTahsilat.md">HasarTahsilat</a>
-<pre>HasarNetOdeme = Hasar[OdemeToplami] - Hasar[TahsilatToplami]</pre>
+<pre>HasarNetOdeme = [OdemeToplami] - [TahsilatToplami]</pre>
 
 

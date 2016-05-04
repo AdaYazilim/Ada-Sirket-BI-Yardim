@@ -62,9 +62,10 @@ let
         #"Added Custom" = Table.AddColumn(#"Removed Other Columns", "PoliceKey", each [HACENTA]&"_"&[HBRANS]&"_"&[HPOLICE_NO]&"_"&[HTECDIT_NO]&"_"&[HZEYL_NO]),
         #"Added Custom1" = Table.AddColumn(#"Added Custom", "HasarKey", each [HKOD]&"_"&[HILKODU]&"_"&[HDOSYA_NO]&"_"&[FHASNO]),
         #"Added Custom2" = Table.AddColumn(#"Added Custom1", "HasarTurKey", each "HasarTuru_"&[HKOD]&"_"&[HTURU]),
-        #"Added Custom3" = Table.AddColumn(#"Added Custom2", "DosyaTurKey", each "DosyaTuru_"&[HKOD]&"_"+[FDOSYATUR])
+        #"Added Custom3" = Table.AddColumn(#"Added Custom2", "DosyaTurKey", each "DosyaTuru_"&[HKOD]&"_"+[FDOSYATUR]),
+        #"Added Custom4" = Table.AddColumn(#"Added Custom3", "HasarDosyaKey", each [HKOD]&"_"&[HILKODU]&"_"&[HDOSYA_NO]) 
 in
-    #"Added Custom3"
+    #"Added Custom4"
 </pre>
 
 <h2>Formüller</h2>

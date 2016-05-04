@@ -68,7 +68,7 @@ Poliçeye ait en son kesilmiş zeyilin numarasını belirtir. İhtiyaç duyulan 
 Tahakkuk eden primler toplamından, iade / iptal primler toplamını çıkartır. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a>
 <pre>SonDurum_NetPrim = SUMX(RELATEDTABLE(PoliceZeyil);PoliceZeyil[NetPrim])</pre>
 
-<h4>HasarAdedi (Measure)</h4>
+<h4>HasarAdet (Measure)</h4>
 Poliçenin hasar adedini belirtir.
 <pre>HasarAdet = COUNTROWS(RELATEDTABLE(HasarDosya))</pre>
 

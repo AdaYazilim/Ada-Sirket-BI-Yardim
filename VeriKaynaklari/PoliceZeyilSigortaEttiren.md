@@ -1,4 +1,4 @@
-<h1>PoliceZeyilTeminat</h1>
+<h1>PoliceZeyilSigortaEttiren</h1>
 Poliçe ve zeyillerin sigorta ettiren ayrıntılarına erişmek için kullanılır. 
 
 <a href="../Tablolar/ASW_SIGORTA_ETTIREN.md">ASW_SIGORTA_ETTIREN</a> tablosunu kullanır.

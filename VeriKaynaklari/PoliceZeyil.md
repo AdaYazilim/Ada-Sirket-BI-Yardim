@@ -61,7 +61,7 @@ let
         #"Filtered Rows" = Table.SelectRows(#"Removed Other Columns", each ([IPT_KAYIT] = "I" or [IPT_KAYIT] = "K")),
         #"Added Custom" = Table.AddColumn(#"Filtered Rows", "PoliceKey", each [ACENTA]&"_"&[BRANS]&"_"&[POLICE_NO]&"_"&[TECDIT_NO]&"_"&[ZEYL_NO]),
         #"Added Custom1" = Table.AddColumn(#"Added Custom", "AnaPoliceKey", each [ACENTA]&"_"&[BRANS]&"_"&[POLICE_NO]&"_"&[TECDIT_NO]&"_   "),
-    #"Added Custom2" = Table.AddColumn(#"Added Custom1", "SigortaliIlIlceKodu", each [T_SIG_IL_KODU]&"_"&[T_SIG_ILCE_KODU]&"_"&[T_SIG_BELDE_KODU])
+        #"Added Custom2" = Table.AddColumn(#"Added Custom1", "SigortaliIlIlceKodu", each [T_SIG_IL_KODU]&"_"&[T_SIG_ILCE_KODU]&"_"&[T_SIG_BELDE_KODU])
 in
     #"Added Custom2"
 </pre>

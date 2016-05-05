@@ -1,4 +1,4 @@
-<h1>IlIlçe</h1>
+<h1>IlIlce</h1>
 Il/İlçe fihristi
 
 <h2>İlişki Kurulabilecek Veri Kaynakları</h2>
@@ -8,14 +8,12 @@ Il/İlçe fihristi
 <th>Ana Veri Kaynağı Kolon Adı</th>
 <th>Çocuk Veri Kaynağı</th>
 <th>Çocuk Veri Kaynağı Kolon Adi</th>
-<th>Çocuk Veri Kaynağı Kolon Tanımı</th>
 </tr>
 <tr>
-<td><a href="../VeriKaynaklari/IlIlce.md">İlIlce</a></td>
+<td><a href="../VeriKaynaklari/IlIlce.md">IlIlce</a></td>
 <td>AlternatifBelediyeKoduKey</td>
 <td><a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a></td>
-<td>IlIlceKodu</td>
-<td>[T_SIG_IL_KODU]&"_"&[T_SIG_ILCE_KODU]&"_"&[T_SIG_BELDE_KODU]</td>
+<td>SigortaliIlIlceKodu</td>
 </tr>
 </table>
 

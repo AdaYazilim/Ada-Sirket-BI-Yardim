@@ -9,12 +9,14 @@ Dosya bazında ay-yıl bazında, muallak kümüllerine erişmek için kullanıl�
 <th>Ana Veri Kaynağı Kolon Adı</th>
 <th>Çocuk Veri Kaynağı</th>
 <th>Çocuk Veri Kaynağı Kolon Adi</th>
+<th>İlişki Özellikleri</th>
 </tr>
 <tr>
 <td><a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a></td>
 <td>HasarKey</td>
 <td><a href="../VeriKaynaklari/HasarMuallakKumul.md">HasarMuallakKumul</a></td>
 <td>HasarKey</td>
+<td>Cross filter direction: Single</td>
 </tr>
 </table>
 

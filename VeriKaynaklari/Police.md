@@ -72,6 +72,14 @@ Poliçenin son durumundaki plaka il kodunu belirtir. İhtiyaç duyulan ilişkili
 Poliçenin son durumundaki sigortalı il kodunu belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyilSigortali.md">PoliceZeyilSigortali</a>
 <pre>SonDurum_SigortaliIlKodu = SUMMARIZE(TOPN(1; RELATEDTABLE(PoliceZeyilSigortali); PoliceZeyilSigortali[MZEYL_NO];DESC);[IL_KODU])</pre>
 
+<h4>SonDurum_SigortaEttirenIlKodu (Column)</h4>
+Poliçenin son durumundaki sigortalı il kodunu belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyilSigortali.md">PoliceZeyilSigortali</a>
+<pre>SonDurum_SigortaEttirenIlKodu = SUMMARIZE(TOPN(1; RELATEDTABLE(PoliceZeyilSigortaEttiren); PoliceZeyilSigortaEttiren[ZEYIL_NO];DESC);[IL_KODU])</pre>
+
+<h4>SonDurum_RizikoIlKodu (Column)</h4>
+Poliçenin son durumundaki sigortalı il kodunu belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyilSigortali.md">PoliceZeyilSigortali</a>
+<pre>SonDurum_RizikoIlKodu = SUMMARIZE(TOPN(1; RELATEDTABLE(PoliceZeyilRizikoAdresi); PoliceZeyilRizikoAdresi[MZEYL_NO];DESC);[IL_KODU])</pre>
+
 <h4>SonDurum_NetPrim (Measure)</h4>
 Tahakkuk eden primler toplamından, iade / iptal primler toplamını çıkartır. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a>
 <pre>SonDurum_NetPrim = SUMX(RELATEDTABLE(PoliceZeyil);PoliceZeyil[NetPrim])</pre>

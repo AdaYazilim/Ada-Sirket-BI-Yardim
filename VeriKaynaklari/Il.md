@@ -1,4 +1,4 @@
-<h1>İlr</h1>
+<h1>İl</h1>
 Il fihristi
 
 <h2>İlişki Kurulabilecek Veri Kaynakları</h2>

@@ -58,8 +58,8 @@ Hasara ait yapılan tüm ödemelerin toplamıdır. İhtiyaç duyulan ilişkili t
 Hasara ait yapılan tüm tahsilatların toplamıdır. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a>
 <pre>TahsilatToplami = SUMX(RELATEDTABLE(HasarMagdur);HasarMagdur[TahsilatToplami])</pre>
 
-<h4>HasarNetOdeme (Measure)</h4>
+<h4>HasarMagdurNetOdeme (Measure)</h4>
 Hasara ait yapılan tüm ödemeler - yapılan tüm tahsilatlar rakamını belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a>
-<pre>HasarNetOdeme = SUMX(RELATEDTABLE(HasarMagdur);HasarMagdur[HasarNetOdeme])</pre>
+<pre>HasarMagdurNetOdeme = [OdemeToplami] - [TahsilatToplami]</pre>
 
 

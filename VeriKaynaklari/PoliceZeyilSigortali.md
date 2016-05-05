@@ -1,4 +1,4 @@
-<h1>PoliceZeyilTeminat</h1>
+<h1>PoliceZeyilSigortali</h1>
 Poliçe ve zeyillerin sigortalı ayrıntılarına erişmek için kullanılır. 
 
 <a href="../Tablolar/SMUSTERI.md">SMUSTERI</a> tablosunu kullanır.

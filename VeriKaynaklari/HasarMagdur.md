@@ -91,8 +91,8 @@ Hasara ait yapılan tüm tahsilatların toplamıdır. İhtiyaç duyulan ilişkil
 Hasara ait yapılan tüm ödemeler - yapılan tüm tahsilatlar rakamını belirtir. İhtiyaç duyulan ilişkili tablolar <a href="../VeriKaynaklari/HasarOdeme.md">HasarOdeme</a> ve <a href="../VeriKaynaklari/HasarTahsilat.md">HasarTahsilat</a>
 <pre>HasarNetOdeme = [OdemeToplami] - [TahsilatToplami]</pre>
 
-<h4>HasarMuallak (Measure)</h4>
+<h4>HasarMagdurMuallak (Measure)</h4>
 Hasara ait muallak rakamını belirtir. Bu değerin doğru çalışabilmesi için tek bir YILAY değerine göre filtreleme yapılmalıdır. Örneğin 201603 seçilirse 2016 mart ayı muallağı görüntülenecektir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarMuallakKumul.md">HasarMuallakKumul</a>
-<pre>HasarMuallak = SUMX(RELATEDTABLE(HasarMuallakKumul);HasarMuallakKumul[HMUALLAK])</pre>
+<pre>HasarMagdurMuallak = SUMX(RELATEDTABLE(HasarMuallakKumul);HasarMuallakKumul[HMUALLAK])</pre>
 
 

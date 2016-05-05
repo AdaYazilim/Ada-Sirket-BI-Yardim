@@ -57,7 +57,7 @@ let
     in
         veritabani,
         dbo_SPOLICE = config{[Schema="dbo",Item="SPOLICE"]}[Data],
-        #"Removed Other Columns" = Table.SelectColumns(dbo_SPOLICE,{"YIL", "ACENTA", "BRANS", "POLICE_NO", "ZEYLKOD2", "ZEYL_KODU", "ZEYL_NO", "TECDIT_NO", "IPT_KAYIT", "BAS_TAR", "BIT_TAR", "TANZIM_TAR", "UW_YEAR", "TANZIM_YER", "KISI_SAYI", "PRIM", "TARIFE_BAS", "ACE_BOLGE_KODU", "ORTAK_NO", "ARAC_TARZ", "T_SIG_IL_KODU", "T_SIG_ILCE_KODU", "T_SIG_BELDE_KODU"}),
+        #"Removed Other Columns" = Table.SelectColumns(dbo_SPOLICE,{"YIL", "ACENTA", "BRANS", "POLICE_NO", "ZEYLKOD2", "ZEYL_KODU", "ZEYL_NO", "TECDIT_NO", "IPT_KAYIT", "BAS_TAR", "BIT_TAR", "TANZIM_TAR", "UW_YEAR", "TANZIM_YER", "KISI_SAYI", "PRIM", "TARIFE_BAS", "ACE_BOLGE_KODU", "ORTAK_NO", "ARAC_TARZ", "T_SIG_IL_KODU", "T_SIG_ILCE_KODU", "T_SIG_BELDE_KODU", "T_PLAKA"}),
         #"Filtered Rows" = Table.SelectRows(#"Removed Other Columns", each ([IPT_KAYIT] = "I" or [IPT_KAYIT] = "K")),
         #"Added Custom" = Table.AddColumn(#"Filtered Rows", "PoliceKey", each [ACENTA]&"_"&[BRANS]&"_"&[POLICE_NO]&"_"&[TECDIT_NO]&"_"&[ZEYL_NO]),
         #"Added Custom1" = Table.AddColumn(#"Added Custom", "AnaPoliceKey", each [ACENTA]&"_"&[BRANS]&"_"&[POLICE_NO]&"_"&[TECDIT_NO]&"_   "),

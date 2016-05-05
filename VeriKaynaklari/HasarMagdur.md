@@ -10,6 +10,7 @@ Trafik hasarlarında her bir mağduru ifade eder. Diğer branş hasarlarında te
 <th>Ana Veri Kaynağı Kolon Adı</th>
 <th>Çocuk Veri Kaynağı</th>
 <th>Çocuk Veri Kaynağı Kolon Adi</th>
+<th>İlişki Özellikleri</th>
 </tr>
 <tr>
 <td><a href="../VeriKaynaklari/HasarDosya.md">HasarDosya</a></td>

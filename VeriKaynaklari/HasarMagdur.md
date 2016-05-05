@@ -12,7 +12,7 @@ Trafik hasarlarında her bir mağduru ifade eder. Diğer branş hasarlarında te
 <th>Çocuk Veri Kaynağı Kolon Adi</th>
 </tr>
 <tr>
-<td>https://www.github.com/AdaYazilim/Ada-Sirket-BI-Yardim/VeriKaynaklari/HasarDosya.md</td>
+<td><a href="../VeriKaynaklari/HasarDosya.md">HasarDosya</a></td>
 <td>HasarDosyaKey</td>
 <td><a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a></td>
 <td>HasarDosyaKey</td>

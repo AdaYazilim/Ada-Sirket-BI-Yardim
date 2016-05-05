@@ -10,36 +10,42 @@ Poliçe ve zeyil kayıtlarına erişmek için kullanılır. <a href="../VeriKayn
 <th>Ana Veri Kaynağı Kolon Adı</th>
 <th>Çocuk Veri Kaynağı</th>
 <th>Çocuk Veri Kaynağı Kolon Adi</th>
+<th>İlişki Özellikleri</th>
 </tr>
 <tr>
 <td><a href="../VeriKaynaklari/Police.md">Police</a></td>
 <td>PoliceKey</td>
 <td><a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a></td>
 <td>AnaPoliceKey</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a></td>
 <td>PoliceKey</td>
 <td><a href="../VeriKaynaklari/PoliceZeyilTeminat.md">PoliceZeyilTeminat</a></td>
 <td>PoliceKey</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a></td>
 <td>PoliceKey</td>
 <td><a href="../VeriKaynaklari/HasarDosya.md">HasarDosya</a></td>
 <td>PoliceKey</td>
+<td>Cross filter direction: Single</td>
 </tr>
 <tr>
 <td><a href="../VeriKaynaklari/Bolge.md">Bolge</a></td>
 <td>BOLGEKODU</td>
 <td><a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a></td>
 <td>ACE_BOLGE_KODU</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="../VeriKaynaklari/IlIlce.md">IlIlce</a></td>
 <td>AlternatifBelediyeKoduKey</td>
 <td><a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a></td>
 <td>SigortaliIlIlceKodu</td>
+<td></td>
 </tr>
 </table>
 

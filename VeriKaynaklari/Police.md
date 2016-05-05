@@ -64,6 +64,10 @@ Araç tarzının son durumunu belirtir. İhtiyaç duyulan ilişkili tablo <a hre
 Poliçeye ait en son kesilmiş zeyilin numarasını belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a>
 <pre>SonDurum_ZeyilNo = SUMMARIZE(TOPN(1; relatedtable(PoliceZeyil); PoliceZeyil[ZEYL_NO];DESC);[ZEYL_NO])</pre>
 
+<h4>SonDurum_PlakaIlKodu (Column)</h4>
+Poliçenin son durumundaki plaka il kodunu rakam cinsinden belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a>
+<pre>SonDurum_PlakaIlKodu = SUMMARIZE(TOPN(1; RELATEDTABLE(PoliceZeyil); PoliceZeyil[ZEYL_NO];DESC);[PlakaIlKodu])</pre>
+
 <h4>SonDurum_NetPrim (Measure)</h4>
 Tahakkuk eden primler toplamından, iade / iptal primler toplamını çıkartır. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a>
 <pre>SonDurum_NetPrim = SUMX(RELATEDTABLE(PoliceZeyil);PoliceZeyil[NetPrim])</pre>
@@ -71,4 +75,7 @@ Tahakkuk eden primler toplamından, iade / iptal primler toplamını çıkartır
 <h4>HasarAdet (Measure)</h4>
 Poliçenin hasar adedini belirtir.
 <pre>HasarAdet = COUNTROWS(RELATEDTABLE(HasarDosya))</pre>
+
+
+
 

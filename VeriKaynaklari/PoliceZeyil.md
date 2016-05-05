@@ -71,3 +71,9 @@ in
 <h4>PoliceZeyilNetPrim (Column)</h4>
 Tahakkuk kayıtlarda artı, iade / iptal kayıtlarda eksi tutarlı olarak net primi ifade eder.
 <pre>PoliceZeyilNetPrim = IF([IPT_KAYIT]="K";[PRIM];[PRIM]*-1)</pre>
+
+<h4>PlakaIlKodu (Column)</h4>
+Plaka il kodunu rakam cinsinden belirtir.
+<pre>PlakaIlKodu = IFERROR(VALUE(IF(IFERROR(SEARCH(" ";[T_PLAKA]);-1) <= 0;"0";LEFT([T_PLAKA];SEARCH(" ";[T_PLAKA]))));0)</pre>
+
+

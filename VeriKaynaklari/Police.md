@@ -65,8 +65,12 @@ Poliçeye ait en son kesilmiş zeyilin numarasını belirtir. İhtiyaç duyulan 
 <pre>SonDurum_ZeyilNo = SUMMARIZE(TOPN(1; relatedtable(PoliceZeyil); PoliceZeyil[ZEYL_NO];DESC);[ZEYL_NO])</pre>
 
 <h4>SonDurum_PlakaIlKodu (Column)</h4>
-Poliçenin son durumundaki plaka il kodunu rakam cinsinden belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a>
+Poliçenin son durumundaki plaka il kodunu belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a>
 <pre>SonDurum_PlakaIlKodu = SUMMARIZE(TOPN(1; RELATEDTABLE(PoliceZeyil); PoliceZeyil[ZEYL_NO];DESC);[PlakaIlKodu])</pre>
+
+<h4>SonDurum_SigortaliIlKodu (Column)</h4>
+Poliçenin son durumundaki sigortalı il kodunu belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyilSigortali.md">PoliceZeyilSigortali</a>
+<pre>SonDurum_SigortaliIlKodu = SUMMARIZE(TOPN(1; RELATEDTABLE(PoliceZeyilSigortali); PoliceZeyilSigortali[MZEYL_NO];DESC);[IL_KODU])</pre>
 
 <h4>SonDurum_NetPrim (Measure)</h4>
 Tahakkuk eden primler toplamından, iade / iptal primler toplamını çıkartır. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a>

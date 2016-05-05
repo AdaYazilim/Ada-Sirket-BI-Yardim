@@ -47,22 +47,23 @@ Poliçe ve zeyil kayıtlarına erişmek için kullanılır. <a href="../VeriKayn
 <h2>Power Query</h2>
 <pre>
 let
-	config = let
-		Source = Xml.Tables(File.Contents("C:\Power BI Raporlar\config.xml")),
-		Table0 = Source{0}[Table],
-		Table1 = Table.TransformColumnTypes(Table0,{{"server", type text}, {"database", type text}}),
-		config = Table1{0},
-		veritabani = Sql.Database(config[server], config[database]),
-		#"Changed Type" = Table.TransformColumnTypes(Source,{{"server", type text}, {"database", type text}})
-	in
-		veritabani,
-		dbo_SPOLICE = config{[Schema="dbo",Item="SPOLICE"]}[Data],
-		#"Removed Other Columns" = Table.SelectColumns(dbo_SPOLICE,{"YIL", "ACENTA", "BRANS", "POLICE_NO", "ZEYLKOD2", "ZEYL_KODU", "ZEYL_NO", "TECDIT_NO", "IPT_KAYIT", "BAS_TAR", "BIT_TAR", "TANZIM_TAR", "UW_YEAR", "TANZIM_YER", "KISI_SAYI", "PRIM", "TARIFE_BAS", "ACE_BOLGE_KODU", "ORTAK_NO", "ARAC_TARZ"}),
-		#"Filtered Rows" = Table.SelectRows(#"Removed Other Columns", each ([IPT_KAYIT] = "I" or [IPT_KAYIT] = "K")),
-		#"Added Custom" = Table.AddColumn(#"Filtered Rows", "PoliceKey", each [ACENTA]&"_"&[BRANS]&"_"&[POLICE_NO]&"_"&[TECDIT_NO]&"_"&[ZEYL_NO]),
-		#"Added Custom1" = Table.AddColumn(#"Added Custom", "AnaPoliceKey", each [ACENTA]&"_"&[BRANS]&"_"&[POLICE_NO]&"_"&[TECDIT_NO]&"_   ")
+    config = let
+        Source = Xml.Tables(File.Contents("C:\Power BI Raporlar\config.xml")),
+        Table0 = Source{0}[Table],
+        Table1 = Table.TransformColumnTypes(Table0,{{"server", type text}, {"database", type text}}),
+        config = Table1{0},
+        veritabani = Sql.Database(config[server], config[database]),
+        #"Changed Type" = Table.TransformColumnTypes(Source,{{"server", type text}, {"database", type text}})
+    in
+        veritabani,
+        dbo_SPOLICE = config{[Schema="dbo",Item="SPOLICE"]}[Data],
+        #"Removed Other Columns" = Table.SelectColumns(dbo_SPOLICE,{"YIL", "ACENTA", "BRANS", "POLICE_NO", "ZEYLKOD2", "ZEYL_KODU", "ZEYL_NO", "TECDIT_NO", "IPT_KAYIT", "BAS_TAR", "BIT_TAR", "TANZIM_TAR", "UW_YEAR", "TANZIM_YER", "KISI_SAYI", "PRIM", "TARIFE_BAS", "ACE_BOLGE_KODU", "ORTAK_NO", "ARAC_TARZ", "T_SIG_IL_KODU", "T_SIG_ILCE_KODU", "T_SIG_BELDE_KODU"}),
+        #"Filtered Rows" = Table.SelectRows(#"Removed Other Columns", each ([IPT_KAYIT] = "I" or [IPT_KAYIT] = "K")),
+        #"Added Custom" = Table.AddColumn(#"Filtered Rows", "PoliceKey", each [ACENTA]&"_"&[BRANS]&"_"&[POLICE_NO]&"_"&[TECDIT_NO]&"_"&[ZEYL_NO]),
+        #"Added Custom1" = Table.AddColumn(#"Added Custom", "AnaPoliceKey", each [ACENTA]&"_"&[BRANS]&"_"&[POLICE_NO]&"_"&[TECDIT_NO]&"_   "),
+    #"Added Custom2" = Table.AddColumn(#"Added Custom1", "SigortaliIlIlceKodu", each [T_SIG_IL_KODU]&"_"&[T_SIG_ILCE_KODU]&"_"&[T_SIG_BELDE_KODU])
 in
-	#"Added Custom1"
+    #"Added Custom2"
 </pre>
 
 <h2>Formüller</h2>

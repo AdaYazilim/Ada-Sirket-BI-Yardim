@@ -77,7 +77,7 @@ Tahakkuk eden primler toplamından, iade / iptal primler toplamını çıkartır
 <pre>SonDurum_NetPrim = SUMX(RELATEDTABLE(PoliceZeyil);PoliceZeyil[NetPrim])</pre>
 
 <h4>HasarAdet (Measure)</h4>
-Poliçenin hasar adedini belirtir.
+Poliçenin hasar adedini belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarDosya.md">HasarDosya</a>
 <pre>HasarAdet = COUNTROWS(RELATEDTABLE(HasarDosya))</pre>
 
 

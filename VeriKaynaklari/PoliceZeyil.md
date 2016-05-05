@@ -35,6 +35,12 @@ Poliçe ve zeyil kayıtlarına erişmek için kullanılır. <a href="../VeriKayn
 <td><a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a></td>
 <td>ACE_BOLGE_KODU</td>
 </tr>
+<tr>
+<td><a href="../VeriKaynaklari/IlIlce.md">IlIlce</a></td>
+<td>AlternatifBelediyeKoduKey</td>
+<td><a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a></td>
+<td>SigortaliIlIlceKodu</td>
+</tr>
 </table>
 
 

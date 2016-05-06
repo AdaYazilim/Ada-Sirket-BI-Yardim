@@ -85,6 +85,10 @@ Hasar türünü belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKayn
 Dosya türünü belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/DosyaTur.md">DosyaTur</a>
 <pre>DosyaTur = RELATED(DosyaTur[METIN])</pre>
 
+<h4>HasarMagdurKapali (Column)</h4>
+Hasar mağdurunun kapanıp kapanmadığını belirtir.
+<pre>HasarMagdurKapali = [KAP_TAR] > DATE(1950; 1; 1)</pre>
+
 <h4>OdemeToplami (Measure)</h4>
 Hasara ait yapılan tüm ödemelerin toplamıdır. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarOdeme.md">HasarOdeme</a>
 <pre>OdemeToplami = SUMX(RELATEDTABLE(HasarOdeme);HasarOdeme[OMIKTARI])</pre>

@@ -10,7 +10,7 @@ Hasar ödeme bilgilerini içerir.
 <th>Çocuk Veri Kaynağı Kolon Adi</th>
 </tr>
 <tr>
-<td><a href="../VeriKaynaklari/Hasar.md">Hasar</a></td>
+<td><a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a></td>
 <td>HasarKey</td>
 <td><a href="../VeriKaynaklari/HasarOdeme.md">HasarOdeme</a></td>
 <td>HasarKey</td>

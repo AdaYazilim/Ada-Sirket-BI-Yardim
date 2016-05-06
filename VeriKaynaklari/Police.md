@@ -94,11 +94,11 @@ Poliçenin hasar mağdur adedini belirtir. Trafik hasarlarında her bir hasarda 
 
 <h4>TeminatNetPrimToplami_X (Measure)</h4>
 Poliçedeki X kodlu teminatın net prim toplamını verir (zeyiller hesaba katılmış olarak). İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyilTeminat.md">PoliceZeyilTeminat</a>
-<pre>389TeminatToplami = SUMX(FILTER(RELATEDTABLE(PoliceZeyilTeminat);PoliceZeyilTeminat[TEM_KODU]="X");PoliceZeyilTeminat[TeminatNetPrim])</pre>
+<pre>TeminatNetPrimToplami_X = SUMX(FILTER(RELATEDTABLE(PoliceZeyilTeminat);PoliceZeyilTeminat[TEM_KODU]="X");PoliceZeyilTeminat[TeminatNetPrim])</pre>
 
 <h4>TeminatNetPrimToplami_X_Haric (Measure)</h4>
 Poliçedeki X kodlu teminat harici tüm teminatların net prim toplamını verir (zeyiller hesaba katılmış olarak). İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyilTeminat.md">PoliceZeyilTeminat</a>
-<pre>389TeminatToplami = SUMX(FILTER(RELATEDTABLE(PoliceZeyilTeminat);PoliceZeyilTeminat[TEM_KODU]<>"X");PoliceZeyilTeminat[TeminatNetPrim])</pre>
+<pre>TeminatNetPrimToplami_X_Haric = SUMX(FILTER(RELATEDTABLE(PoliceZeyilTeminat);PoliceZeyilTeminat[TEM_KODU]<>"X");PoliceZeyilTeminat[TeminatNetPrim])</pre>
 
 
 

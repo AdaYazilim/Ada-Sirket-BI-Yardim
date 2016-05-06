@@ -82,7 +82,7 @@ Poliçenin son durumundaki sigortalı il kodunu belirtir. İhtiyaç duyulan ili�
 
 <h4>X_TeminatVar (Column)</h4>
 Bir poliçede (zeyillerde dikkate alınarak) X kodlu teminatın bulunup bulunmadığını belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyilTeminat.md">PoliceZeyilTeminat</a>
-<pre>X_TeminatVar = COUNTROWS(FILTER(RELATEDTABLE(PoliceZeyilTeminat);PoliceZeyilTeminat[TEM_KODU]="028")) > 0</pre>
+<pre>X_TeminatVar = COUNTROWS(FILTER(RELATEDTABLE(PoliceZeyilTeminat);PoliceZeyilTeminat[TEM_KODU]="X")) > 0</pre>
 
 <h4>SonDurum_NetPrim (Measure)</h4>
 Tahakkuk eden primler toplamından, iade / iptal primler toplamını çıkartır. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a>

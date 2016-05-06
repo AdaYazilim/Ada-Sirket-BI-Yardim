@@ -88,6 +88,19 @@ Tahakkuk eden primler toplamından, iade / iptal primler toplamını çıkartır
 Poliçenin hasar adedini belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarDosya.md">HasarDosya</a>
 <pre>HasarAdet = COUNTROWS(RELATEDTABLE(HasarDosya))</pre>
 
+<h4>HasarMagdurAdet (Measure)</h4>
+Poliçenin hasar mağdur adedini belirtir. Trafik hasarlarında her bir hasarda birden fazla mağdur olabilir. Trafik dışı hasarlarda tek mağdur vardır. Bu formül, tüm mağdurların toplamını verir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a>
+<pre>HasarAdet = COUNTROWS(RELATEDTABLE(HasarMagdur))</pre>
+
+<h4>TeminatNetPrimToplami_X (Measure)</h4>
+Poliçedeki X kodlu teminatın net prim toplamını verir (zeyiller hesaba katılmış olarak). İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyilTeminat.md">PoliceZeyilTeminat</a>
+<pre>389TeminatToplami = SUMX(FILTER(RELATEDTABLE(PoliceZeyilTeminat);PoliceZeyilTeminat[TEM_KODU]="X");PoliceZeyilTeminat[TeminatNetPrim])</pre>
+
+<h4>TeminatNetPrimToplami_X_Haric (Measure)</h4>
+Poliçedeki X kodlu teminat harici tüm teminatların net prim toplamını verir (zeyiller hesaba katılmış olarak). İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyilTeminat.md">PoliceZeyilTeminat</a>
+<pre>389TeminatToplami = SUMX(FILTER(RELATEDTABLE(PoliceZeyilTeminat);PoliceZeyilTeminat[TEM_KODU]<>"X");PoliceZeyilTeminat[TeminatNetPrim])</pre>
+
+
 
 
 

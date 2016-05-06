@@ -90,7 +90,7 @@ Poliçenin hasar adedini belirtir. İhtiyaç duyulan ilişkili tablo <a href="..
 
 <h4>HasarMagdurAdet (Measure)</h4>
 Poliçenin hasar mağdur adedini belirtir. Trafik hasarlarında her bir hasarda birden fazla mağdur olabilir. Trafik dışı hasarlarda tek mağdur vardır. Bu formül, tüm mağdurların toplamını verir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a>
-<pre>HasarAdet = COUNTROWS(RELATEDTABLE(HasarMagdur))</pre>
+<pre>HasarMagdurAdet = COUNTROWS(RELATEDTABLE(HasarMagdur))</pre>
 
 <h4>TeminatNetPrimToplami_X (Measure)</h4>
 Poliçedeki X kodlu teminatın net prim toplamını verir (zeyiller hesaba katılmış olarak). İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyilTeminat.md">PoliceZeyilTeminat</a>

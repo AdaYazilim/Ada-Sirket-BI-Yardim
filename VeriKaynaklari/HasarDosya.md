@@ -65,4 +65,9 @@ Hasara ait yapılan tüm tahsilatların toplamıdır. İhtiyaç duyulan ilişkil
 Hasara ait yapılan tüm ödemeler - yapılan tüm tahsilatlar rakamını belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a>
 <pre>HasarMagdurNetOdeme = [OdemeToplami] - [TahsilatToplami]</pre>
 
+<h4>HasarMagdurNetOdeme (Measure)</h4>
+Hasar dosyasının kapalı olup olmadığını belirtir. İlişkili HasarMagdur kayıtlarının tamamı kapalıysa dosya kapalıdır. Mağdurlardan bir tanesi bile açıksa dosya açık kabul edilir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a>
+<pre>HasarDosyaKapali = COUNTROWS(FILTER(RELATEDTABLE(HasarMagdur);HasarMagdur[HasarMagdurKapali]=FALSE())) = 0</pre>
+
+
 

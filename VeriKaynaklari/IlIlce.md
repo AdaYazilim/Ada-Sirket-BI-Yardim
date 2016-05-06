@@ -21,11 +21,18 @@ Il/İlçe fihristi
 <h2>Power Query</h2>
 <pre>
 let
+    config = let
     Source = Xml.Tables(File.Contents("C:\Power BI Raporlar\config.xml")),
-    Table0 = Source{0}[Table],
-    Table1 = Table.TransformColumnTypes(Table0,{{"server", type text}, {"database", type text}}),
-    config = Table1{0},
-    veritabani = Sql.Database(config[server], config[database], [Query="SELECT DISTINCT(A_IL_KODU), IL_ADI FROM ASW_BELEDIYE ORDER BY A_IL_KODU"]) 
+Table0 = Source{0}[Table],
+   Table1 = Table.TransformColumnTypes(Table0,{{"server", type text}, {"database", type text}}),
+   config = Table1{0},
+   veritabani = Sql.Database(config[server], config[database]),
+    #"Changed Type" = Table.TransformColumnTypes(Source,{{"server", type text}, {"database", type text}})
 in
-    veritabani
+    veritabani,
+    dbo_ASW_BELEDIYE = config{[Schema="dbo",Item="ASW_BELEDIYE"]}[Data],
+    #"Added Custom" = Table.AddColumn(dbo_ASW_BELEDIYE, "AlternatifBelediyeKoduKey", each [A_IL_KODU]&"_"&[A_ILCE_KODU]&"_"&[A_BELDE_KODU])
+in
+    #"Added Custom"
+    
 </pre>

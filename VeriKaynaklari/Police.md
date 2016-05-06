@@ -92,21 +92,21 @@ Poliçenin hasar adedini belirtir. İhtiyaç duyulan ilişkili tablo <a href="..
 Poliçenin hasar mağdur adedini belirtir. Trafik hasarlarında her bir hasarda birden fazla mağdur olabilir. Trafik dışı hasarlarda tek mağdur vardır. Bu formül, tüm mağdurların toplamını verir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a>
 <pre>HasarMagdurAdet = COUNTROWS(RELATEDTABLE(HasarMagdur))</pre>
 
-<h4>TeminatNetPrimToplami_X (Measure)</h4>
+<h4>X_TeminatNetPrimToplami (Measure)</h4>
 Poliçedeki X kodlu teminatın net prim toplamını verir (zeyiller hesaba katılmış olarak). İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyilTeminat.md">PoliceZeyilTeminat</a>
-<pre>TeminatNetPrimToplami_X = SUMX(FILTER(RELATEDTABLE(PoliceZeyilTeminat);PoliceZeyilTeminat[TEM_KODU]="X");PoliceZeyilTeminat[TeminatNetPrim])</pre>
+<pre>X_TeminatNetPrimToplami = SUMX(FILTER(RELATEDTABLE(PoliceZeyilTeminat);PoliceZeyilTeminat[TEM_KODU]="X");PoliceZeyilTeminat[TeminatNetPrim])</pre>
 
-<h4>TeminatlarNetPrimToplami_X_Y (Measure)</h4>
+<h4>X_Y_TeminatlarNetPrimToplami (Measure)</h4>
 Poliçedeki X ve Y kodlu teminatların net prim toplamını verir (zeyiller hesaba katılmış olarak). || (OR) operatörü kullanılarak istenilen sayıda teminat kodu girilebilir İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyilTeminat.md">PoliceZeyilTeminat</a>
-<pre>TeminatlarNetPrimToplami_X_Y = SUMX(FILTER(RELATEDTABLE(PoliceZeyilTeminat);PoliceZeyilTeminat[TEM_KODU]="X" || PoliceZeyilTeminat[TEM_KODU]="Y");PoliceZeyilTeminat[TeminatNetPrim])</pre>
+<pre>X_Y_TeminatlarNetPrimToplami = SUMX(FILTER(RELATEDTABLE(PoliceZeyilTeminat);PoliceZeyilTeminat[TEM_KODU]="X" || PoliceZeyilTeminat[TEM_KODU]="Y");PoliceZeyilTeminat[TeminatNetPrim])</pre>
 
-<h4>TeminatNetPrimToplami_X_Haric (Measure)</h4>
+<h4>X_Haric_TeminatNetPrimToplami (Measure)</h4>
 Poliçedeki X kodlu teminat harici tüm teminatların net prim toplamını verir (zeyiller hesaba katılmış olarak). İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyilTeminat.md">PoliceZeyilTeminat</a>
-<pre>TeminatNetPrimToplami_X_Haric = SUMX(FILTER(RELATEDTABLE(PoliceZeyilTeminat);PoliceZeyilTeminat[TEM_KODU]<>"X");PoliceZeyilTeminat[TeminatNetPrim])</pre>
+<pre>X_Haric_TeminatNetPrimToplami = SUMX(FILTER(RELATEDTABLE(PoliceZeyilTeminat);PoliceZeyilTeminat[TEM_KODU]<>"X");PoliceZeyilTeminat[TeminatNetPrim])</pre>
 
-<h4>TeminatNetPrimToplami_X_Y_Haric (Measure)</h4>
+<h4>X_Y_Haric_TeminatNetPrimToplami (Measure)</h4>
 Poliçedeki X ve Y kodlu teminatlar harici tüm teminatların net prim toplamını verir (zeyiller hesaba katılmış olarak). İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyilTeminat.md">PoliceZeyilTeminat</a>
-<pre>TeminatNetPrimToplami_X_Y_Haric = SUMX(FILTER(RELATEDTABLE(PoliceZeyilTeminat);PoliceZeyilTeminat[TEM_KODU]<>"X" && PoliceZeyilTeminat[TEM_KODU]<>"Y");PoliceZeyilTeminat[TeminatNetPrim])</pre>
+<pre>X_Y_Haric_TeminatNetPrimToplami = SUMX(FILTER(RELATEDTABLE(PoliceZeyilTeminat);PoliceZeyilTeminat[TEM_KODU]<>"X" && PoliceZeyilTeminat[TEM_KODU]<>"Y");PoliceZeyilTeminat[TeminatNetPrim])</pre>
 
 <h4>PoliceTeminatNetPrim (Measure)</h4>
 Poliçedeki tüm teminatların net prim toplamını verir (zeyiller hesaba katılmış olarak). İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyilTeminat.md">PoliceZeyilTeminat</a>

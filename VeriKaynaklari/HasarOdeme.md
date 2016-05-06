@@ -41,3 +41,6 @@ in
 
 <h2>Formüller</h2>
 
+<h4>HasarOdemeYilAy (Column)</h4>
+Ödeme tarihini YYYYAA formatında belirtir.
+<pre>HasarOdemeYilAy = CONCATENATE(YEAR([OTARIH]);IF(MONTH([OTARIH])<10;CONCATENATE("0";MONTH([OTARIH]));MONTH([OTARIH])))</pre>

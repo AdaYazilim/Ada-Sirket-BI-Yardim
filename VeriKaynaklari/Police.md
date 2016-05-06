@@ -84,9 +84,9 @@ Poliçenin son durumundaki sigortalı il kodunu belirtir. İhtiyaç duyulan ili�
 Tahakkuk eden primler toplamından, iade / iptal primler toplamını çıkartır. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a>
 <pre>SonDurum_NetPrim = SUMX(RELATEDTABLE(PoliceZeyil);PoliceZeyil[NetPrim])</pre>
 
-<h4>HasarAdet (Measure)</h4>
+<h4>HasarDosyaAdet (Measure)</h4>
 Poliçenin hasar adedini belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarDosya.md">HasarDosya</a>
-<pre>HasarAdet = COUNTROWS(RELATEDTABLE(HasarDosya))</pre>
+<pre>HasarDosyaAdet = COUNTROWS(RELATEDTABLE(HasarDosya))</pre>
 
 <h4>HasarMagdurAdet (Measure)</h4>
 Poliçenin hasar mağdur adedini belirtir. Trafik hasarlarında her bir hasarda birden fazla mağdur olabilir. Trafik dışı hasarlarda tek mağdur vardır. Bu formül, tüm mağdurların toplamını verir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a>

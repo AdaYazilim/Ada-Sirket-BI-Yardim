@@ -1,5 +1,5 @@
-<h1>HasarMuallakTarihi</h1>
-Muallak tarihini filtrelemek için kullanılır. 
+<h1>MuallakVeOdemeTarih</h1>
+Muallak, hasar ödeme ve hasar tahsilat tarihini filtrelemek için kullanılır. 
 
 <h2>İlişki Kurulabilecek Veri Kaynakları</h2>
 <table>
@@ -10,10 +10,22 @@ Muallak tarihini filtrelemek için kullanılır.
 <th>Çocuk Veri Kaynağı Kolon Adi</th>
 </tr>
 <tr>
-<td><a href="../VeriKaynaklari/HasarMuallakTarihi.md">HasarMuallakTarihi</a></td>
+<td><a href="../VeriKaynaklari/MuallakVeOdemeTarih.md">MuallakVeOdemeTarih</a></td>
 <td>Muallak Tarihi</td>
 <td><a href="../VeriKaynaklari/HasarMuallakKumul.md">HasarMuallakKumul</a></td>
 <td>YILAY</td>
+</tr>
+<tr>
+<td><a href="../VeriKaynaklari/MuallakVeOdemeTarih.md">MuallakVeOdemeTarih</a></td>
+<td>Muallak Tarihi</td>
+<td><a href="../VeriKaynaklari/HasarOdeme.md">HasarOdeme</a></td>
+<td>HasarOdemeYilAy</td>
+</tr>
+<tr>
+<td><a href="../VeriKaynaklari/MuallakVeOdemeTarih.md">MuallakVeOdemeTarih</a></td>
+<td>Muallak Tarihi</td>
+<td><a href="../VeriKaynaklari/HasarTahsilat.md">HasarTahsilat</a></td>
+<td>HasarTahsilatYilAy</td>
 </tr>
 </table>
 

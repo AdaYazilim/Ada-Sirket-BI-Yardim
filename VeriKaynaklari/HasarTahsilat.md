@@ -41,3 +41,6 @@ in
 
 <h2>Formüller</h2>
 
+<h4>HasarTahsilatYilAy (Column)</h4>
+Tahsilat tarihini YYYYAA formatında belirtir.
+<pre>HasarTahsilatYilAy = CONCATENATE(YEAR([OTARIH]);IF(MONTH([OTARIH])<10;CONCATENATE("0";MONTH([OTARIH]));MONTH([OTARIH])))</pre>

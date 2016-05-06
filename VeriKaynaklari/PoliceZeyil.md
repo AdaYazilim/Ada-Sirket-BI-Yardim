@@ -1,5 +1,5 @@
 <h1>PoliceZeyil</h1>
-Poliçe ve zeyil kayıtlarına erişmek için kullanılır. <a href="../VeriKaynaklari/Police.md">Police</a> veri kaynağına ilişkilendirilip poliçe son durum bilgilerini almak için kullanılabilir.
+Tüm poliçe ve zeyil kayıtlarına erişmek için kullanılır. <a href="../VeriKaynaklari/Police.md">Police</a> veri kaynağına ilişkilendirilip poliçe son durum bilgilerini almak için kullanılabilir.
 
 <a href="../Tablolar/SPOLICE.md">SPOLICE</a> tablosunu kullanır.
 
@@ -81,5 +81,17 @@ Tahakkuk kayıtlarda artı, iade / iptal kayıtlarda eksi tutarlı olarak net pr
 <h4>PlakaIlKodu (Column)</h4>
 Plaka il kodunu rakam cinsinden belirtir.
 <pre>PlakaIlKodu = IF(IFERROR(SEARCH(" ";[T_PLAKA]);-1) <= 0;"0";LEFT([T_PLAKA];SEARCH(" ";[T_PLAKA])))</pre>
+
+<h4>PoliceZeyilTanzimYil (Column)</h4>
+Poliçe/zeyil kaydının tanzim yılını belirtir.
+<pre>PoliceZeyilTanzimYil = YEAR(PoliceZeyil[TANZIM_TAR])</pre>
+
+<h4>PoliceZeyilTanzimAy (Column)</h4>
+Poliçe/zeyil kaydının tanzim ayını belirtir.
+<pre>PoliceZeyilTanzimAy = MONTH(PoliceZeyil[TANZIM_TAR])</pre>
+
+<h4>PoliceZeyilTanzimGun (Column)</h4>
+Poliçe/zeyil kaydının tanzim gününü belirtir.
+<pre>PoliceZeyilTanzimGun = DAY(PoliceZeyil[TANZIM_TAR])</pre>
 
 

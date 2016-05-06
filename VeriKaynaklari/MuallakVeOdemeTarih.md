@@ -38,7 +38,7 @@ let
     Table1 = Table.TransformColumnTypes(Table0,{{"server", type text}, {"database", type text}}),
     config = Table1{0},
     veritabani = Sql.Database(config[server], config[database], [Query="SELECT DISTINCT(YILAY) FROM SHASKUM where YILAY NOT LIKE '%99'"]),
-    #"Renamed Columns" = Table.RenameColumns(veritabani,{{"YILAY", "Muallak Tarihi"}})
+    #"Renamed Columns" = Table.RenameColumns(veritabani,{{"YILAY", "Muallak / Ödeme Tarihi"}})
 in
     #"Renamed Columns"
 </pre>

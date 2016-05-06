@@ -43,6 +43,13 @@ Trafik hasarlarında her bir mağduru ifade eder. Diğer branş hasarlarında te
 <tr>
 <td><a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a></td>
 <td>HasarKey</td>
+<td><a href="../VeriKaynaklari/HasarTahsilat.md">HasarTahsilat</a></td>
+<td>HasarKey</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../VeriKaynaklari/HasarMagdur.md">HasarMagdur</a></td>
+<td>HasarKey</td>
 <td><a href="../VeriKaynaklari/HasarMuallakKumul.md">HasarMuallakKumul</a></td>
 <td>HasarKey</td>
 <td>Cross filter direction: Single</td>

@@ -28,7 +28,7 @@ let
     Table1 = Table.TransformColumnTypes(Table0,{{"server", type text}, {"database", type text}}),
     config = Table1{0},
     veritabani = Sql.Database(config[server], config[database], [Query="select * from ASW_SIGORTA_ETTIREN SE where exists (select '' from SPOLICE p where p.acenta = SE.ACENTE and p.BRANS = SE.BRANS AND P.POLICE_NO = SE.POLICE_NO AND P.TECDIT_NO = SE.TECDIT_NO AND P.ZEYL_NO=SE.ZEYIL_NO AND P.IPT_KAYIT IN ('K','I'))"]),
-    #"Removed Other Columns" = Table.SelectColumns(veritabani,{"ACENTE", "BRANS", "POLICE_NO", "TECDIT_NO", "ZEYIL_NO", "AD", "SOYAD", "DOGUM_TARIHI", "CINSIYET", "IL_KODU", "ILCE_KODU", "UYRUK", "OLUM_TARIHI"}),
+    #"Removed Other Columns" = Table.SelectColumns(veritabani,{"ACENTE", "BRANS", "POLICE_NO", "TECDIT_NO", "ZEYIL_NO", "DOGUM_TARIHI", "CINSIYET", "IL_KODU", "ILCE_KODU", "UYRUK", "OLUM_TARIHI"}),
     #"Added Custom" = Table.AddColumn(#"Removed Other Columns", "PoliceKey", each [ACENTE]&"_"&[BRANS]&"_"&[POLICE_NO]&"_"&[TECDIT_NO]&"_"&[ZEYIL_NO])
 in
     #"Added Custom"

@@ -12,7 +12,7 @@
 <tr>
 <td><a href="../VeriKaynaklari/Bolge.md">Urun</a></td>
 <td>BKODU</td>
-<td><a href="../VeriKaynaklari/PoliceZeyil.md">Police</a></td>
+<td><a href="../VeriKaynaklari/Police.md">Police</a></td>
 <td>BRANS</td>
 </tr>
 </table>

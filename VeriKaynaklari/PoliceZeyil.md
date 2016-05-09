@@ -94,4 +94,9 @@ Poliçe/zeyil kaydının tanzim ayını belirtir.
 Poliçe/zeyil kaydının tanzim gününü belirtir.
 <pre>PoliceZeyilTanzimGun = DAY(PoliceZeyil[TANZIM_TAR])</pre>
 
+<h4>MebIptalZeyilimi (Column)</h4>
+Poliçe/zeyil kaydının bir mebdeinden iptal zeyili olup olmadığını belirtir. Kayıt bir poliçe ise her zaman false döner. Bir poliçenin mebdeinden iptal edilip edilmediğini raporlarda kullanmak için <a href="../VeriKaynaklari/Police.md">Police</a> veri kaynağını kullanın.
+<pre>MebIptalZeyilimi = IFERROR(SEARCH("mebd";RELATED(ZeyilTanim[AD])) > 0;FALSE())</pre>
+
+
 

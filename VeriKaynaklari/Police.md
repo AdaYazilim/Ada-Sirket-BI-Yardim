@@ -52,6 +52,10 @@ in
 Poliçenin iptal edilip edilmediğini belirtir.
 <pre>IptalEdilmis = Police[IPTAL_DURUMU]=1</pre>
 
+<h4>MebIptalEdilmis (Column)</h4>
+Poliçenin mebdeinden iptal zeyili ile iptal edilip edilmediğini belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a>
+<pre>MebIptalEdilmis = SUMMARIZE(TOPN(1; RELATEDTABLE(PoliceZeyil); PoliceZeyil[ZEYL_NO];DESC);[MebIptalZeyilimi])</pre>
+
 <h4>YasayanPolice (Column)</h4>
 Yaşayan poliçe olup olmadığını belirtir. 
 <pre>YasayanPolice = AND(AND(Police[BAS_TAR]<=TODAY();TODAY()<=Police[BIT_TAR]);NOT(Police[IptalEdilmis]))</pre>
@@ -115,6 +119,8 @@ Poliçedeki X ve Y kodlu teminatlar harici tüm teminatların net prim toplamın
 <h4>PoliceTeminatNetPrim (Measure)</h4>
 Poliçedeki tüm teminatların net prim toplamını verir (zeyiller hesaba katılmış olarak). İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyilTeminat.md">PoliceZeyilTeminat</a>
 <pre>PoliceTeminatNetPrim = SUMX(RELATEDTABLE(PoliceZeyilTeminat);PoliceZeyilTeminat[TeminatNetPrim])</pre>
+
+
 
 
 

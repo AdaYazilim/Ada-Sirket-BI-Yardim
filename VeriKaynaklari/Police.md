@@ -88,6 +88,10 @@ Poliçenin son durumundaki sigortalı il kodunu belirtir. İhtiyaç duyulan ili�
 Bir poliçede (zeyillerde dikkate alınarak) X kodlu teminatın bulunup bulunmadığını belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyilTeminat.md">PoliceZeyilTeminat</a>
 <pre>X_TeminatVar = COUNTROWS(FILTER(RELATEDTABLE(PoliceZeyilTeminat);PoliceZeyilTeminat[TEM_KODU]="X")) > 0</pre>
 
+<h4>PoliceKPK (Column)</h4>
+Poliçenin zeyilleri de hesaba katılmış olarak net KPK rakamını belirtir. İptal olmuş poliçelerde rakam 0'dır.  İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a>
+<pre>PoliceKPK = SUMX(PoliceZeyil;PoliceZeyil[PoliceZeyilKPK])</pre>
+
 <h4>SonDurum_NetPrim (Measure)</h4>
 Tahakkuk eden primler toplamından, iade / iptal primler toplamını çıkartır. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a>
 <pre>SonDurum_NetPrim = SUMX(RELATEDTABLE(PoliceZeyil);PoliceZeyil[NetPrim])</pre>

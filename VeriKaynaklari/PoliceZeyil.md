@@ -98,5 +98,23 @@ Poliçe/zeyil kaydının tanzim gününü belirtir.
 Poliçe/zeyil kaydının bir mebdeinden iptal zeyili olup olmadığını belirtir. Kayıt bir poliçe ise her zaman false döner. Bir poliçenin mebdeinden iptal edilip edilmediğini raporlarda kullanmak için <a href="../VeriKaynaklari/Police.md">Police</a> veri kaynağını kullanın.
 <pre>MebIptalZeyilimi = IFERROR(SEARCH("mebd";RELATED(ZeyilTanim[AD])) > 0;FALSE())</pre>
 
+<h4>GunlukPrim (Column)</h4>
+Poliçe/zeyil kaydının bir günlük primini belirtir.
+<pre>GunlukPrim = [PRIM]/[PoliceZeyilGunSayisi]</pre>
+
+<h4>PoliceZeyilGunSayisi (Column)</h4>
+Poliçe/zeyil kaydının başlangıcı ile bitişi arasındaki gün sayısını belirtir. Aynı gün başlayıp biten poliçelerde değer 1'dir.
+<pre>PoliceZeyilGunSayisi = IF([BIT_TAR]<=[BAS_TAR];1;DATEDIFF([BAS_TAR];[BIT_TAR];DAY))</pre>
+
+<h4>GunlukPrim (Column)</h4>
+Poliçe/zeyil kaydının net KPK değerini belirtir. Tahakkuk kayıtlarda artı, iptal kayıtlarda eksi tutarlıdır.
+<pre>PoliceZeyilKPK = IF([IPT_KAYIT]="K";[KalanGunSayisi]*[GunlukPrim];-1*[KalanGunSayisi]*[GunlukPrim])</pre>
+
+<h4>KalanGunSayisi (Column)</h4>
+Poliçe/zeyil kaydının bitişine kalan gün sayısını belirtir. İptal edilmiş ve sonlanmış poliçelerde değer 0'dır.
+<pre>KalanGunSayisi = IF(OR(TODAY()>=[BIT_TAR];RELATED(Police[IptalEdilmis]));0;DATEDIFF(TODAY();[BIT_TAR];DAY))</pre>
+
+
+
 
 

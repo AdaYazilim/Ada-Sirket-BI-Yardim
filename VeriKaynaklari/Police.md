@@ -94,7 +94,7 @@ Poliçenin zeyilleri de hesaba katılmış olarak net KPK rakamını belirtir. �
 
 <h4>SonDurum_NetPrim (Measure)</h4>
 Tahakkuk eden primler toplamından, iade / iptal primler toplamını çıkartır. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/PoliceZeyil.md">PoliceZeyil</a>
-<pre>SonDurum_NetPrim = SUMX(RELATEDTABLE(PoliceZeyil);PoliceZeyil[NetPrim])</pre>
+<pre>SonDurum_NetPrim = SUMX(RELATEDTABLE(PoliceZeyil);PoliceZeyil[PoliceZeyilNetPrim])</pre>
 
 <h4>HasarDosyaAdet (Measure)</h4>
 Poliçenin hasar adedini belirtir. İhtiyaç duyulan ilişkili tablo <a href="../VeriKaynaklari/HasarDosya.md">HasarDosya</a>

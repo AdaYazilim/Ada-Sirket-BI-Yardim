@@ -106,7 +106,7 @@ Poliçe/zeyil kaydının bir günlük primini belirtir.
 Poliçe/zeyil kaydının başlangıcı ile bitişi arasındaki gün sayısını belirtir. Aynı gün başlayıp biten poliçelerde değer 1'dir.
 <pre>PoliceZeyilGunSayisi = IF([BIT_TAR]<=[BAS_TAR];1;DATEDIFF([BAS_TAR];[BIT_TAR];DAY))</pre>
 
-<h4>GunlukPrim (Column)</h4>
+<h4>PoliceZeyilKPK (Column)</h4>
 Poliçe/zeyil kaydının net KPK değerini belirtir. Tahakkuk kayıtlarda artı, iptal kayıtlarda eksi tutarlıdır.
 <pre>PoliceZeyilKPK = IF([IPT_KAYIT]="K";[KalanGunSayisi]*[GunlukPrim];-1*[KalanGunSayisi]*[GunlukPrim])</pre>
 
